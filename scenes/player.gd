@@ -14,5 +14,4 @@ func _physics_process(_delta: float) -> void:
 		velocity.x += SPEED
 	
 	velocity = velocity.limit_length(SPEED)
-	print(velocity.length())
 	move_and_slide()

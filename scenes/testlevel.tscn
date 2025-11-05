@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://b1lp30iyd6fco"]
+[gd_scene load_steps=21 format=4 uid="uid://b1lp30iyd6fco"]
 
 [ext_resource type="Texture2D" uid="uid://k54ffgc6l6q3" path="res://sprites/horror/Inside_D.png" id="1_hyqgw"]
 [ext_resource type="Texture2D" uid="uid://0rert5llgek2" path="res://sprites/horror/Inside_C.png" id="2_bx6wm"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dk856cynv2ved" path="res://sprites/horror/Inside_E.png" id="5_o40l3"]
 [ext_resource type="Texture2D" uid="uid://dh4gjcudcwlw4" path="res://sprites/horror/Outside.png" id="6_ihbyj"]
 [ext_resource type="PackedScene" uid="uid://f451jspvsyb4" path="res://scenes/player.tscn" id="7_bx6wm"]
+[ext_resource type="Script" uid="uid://bj24gumcic2lt" path="res://scripts/interacts/default.gd" id="7_fljaa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ifqpo"]
 texture = ExtResource("1_hyqgw")
@@ -7187,6 +7188,8 @@ tile_set = SubResource("TileSet_ovtu5")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(657, 60)
+script = ExtResource("7_fljaa")
+npc_id = "testdialogue"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_bx6wm")

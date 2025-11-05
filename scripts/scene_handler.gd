@@ -32,7 +32,7 @@ func _deferred_load_scene(scene_res):
 				area.body_entered.connect(func(body):
 					_on_area_entered(area, body)
 					)
-	FadeLayer.fade_out(3.1)
+	FadeLayer.fade_out(0.1)
 
 func _on_area_entered(area, body) -> void:
 	if not body.is_in_group("Player"):
