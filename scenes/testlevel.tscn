@@ -7189,7 +7189,6 @@ tile_set = SubResource("TileSet_ovtu5")
 position = Vector2(657, 60)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-2, -3)
 shape = SubResource("CircleShape2D_bx6wm")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("7_bx6wm")]
