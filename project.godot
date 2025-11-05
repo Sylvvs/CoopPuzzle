@@ -15,6 +15,9 @@ run/main_scene="uid://c73eai04owsjo"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://sprites/icon.svg"
 
+[autoload]
+
+FadeLayer="*res://scenes/logic/FadeLayer.tscn"
 [input]
 
 up={
