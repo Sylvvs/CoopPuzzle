@@ -3,10 +3,10 @@ extends Node
 var current_scene: Node = null
 
 func _ready() -> void:
-	load_scene("Tut")
+	load_scene("testlevel")
 
 func load_scene(scene_name: String) -> void:
-	var path = "res://Scenes/Levels/%s.tscn" % scene_name
+	var path = "res://Scenes/%s.tscn" % scene_name
 	var scene_res = load(path)
 	if scene_res == null:
 		push_error("Failed to load scene: " + path)
@@ -32,7 +32,7 @@ func _deferred_load_scene(scene_res):
 				area.body_entered.connect(func(body):
 					_on_area_entered(area, body)
 					)
-	FadeLayer.fade_out(0.1)
+	FadeLayer.fade_out(3.1)
 
 func _on_area_entered(area, body) -> void:
 	if not body.is_in_group("Player"):
