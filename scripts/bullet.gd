@@ -1,0 +1,65 @@
+extends Area2D
+
+var FUNCT: Callable
+var derivative: Callable
+var speed := 5.0
+var lifetime := 5.0
+
+var elapsed_time := 0.0
+var arc_table := [] 
+
+var total_length := 0.0
+var init_pos
+
+func _ready() -> void:
+	init_pos = position;
+	if FUNCT.is_valid():
+		_precompute_arc_length()
+
+func _precompute_arc_length():
+	var step := 0.01
+	var s := 0.0
+	var last_y = FUNCT.call(0.0)
+	
+	for x in range(0, 1000):
+		var xf := x * step
+		var y = FUNCT.call(xf)
+		var dx := step
+		var dy = y - last_y
+		s += sqrt(dx * dx + dy * dy)
+		last_y = y
+		arc_table.append({ "x": xf, "s": s })
+	
+	total_length = s
+
+func _process(delta: float) -> void:
+	if not FUNCT.is_valid():
+		return
+
+	elapsed_time += delta
+	var distance := elapsed_time * speed
+
+	var x := _get_x_from_arc(distance)
+	var y = FUNCT.call(x)
+	
+	position = init_pos+ Vector2(x * 100, -y * 100).rotated(rotation)
+	
+	
+	if elapsed_time > lifetime:
+		queue_free()
+
+func _get_x_from_arc(s: float) -> float:
+	if s <= 0.0:
+		return 0.0
+	if s >= total_length:
+		return arc_table[-1]["x"]
+
+	var low := 0
+	var high := arc_table.size() - 1
+	while low < high:
+		var mid = (low + high) / 2
+		if arc_table[mid]["s"] < s:
+			low = mid + 1
+		else:
+			high = mid
+	return arc_table[low]["x"]

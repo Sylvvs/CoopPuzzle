@@ -1,3 +1,3 @@
-[gd_scene format=3 uid="uid://crr4y3tjshsfd"]
+[gd_scene load_steps=0 format=3 uid="uid://crr4y3tjshsfd"]
 
 [node name="SceneHandler" type="Node2D"]
