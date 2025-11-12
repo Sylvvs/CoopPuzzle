@@ -9,6 +9,8 @@ var level_up_requirement = 10
 var level_up_scaling = 1.8
 
 
+@onready var animation_tree = $AnimationTree
+
 func _process(_delta: float) -> void:
 	if xp >= level_up_requirement:
 		level_up()
@@ -31,7 +33,8 @@ func _physics_process(_delta: float) -> void:
 	velocity = velocity.limit_length(SPEED)
 	move_and_slide()
 	
-		
+	var mouse_dir = (get_global_mouse_position() - global_position).normalized()
+	animation_tree["parameters/Walking/blend_position"] = Vector2(mouse_dir.x, -mouse_dir.y)
 	
 	if health <= 0:
 		get_tree().quit()
