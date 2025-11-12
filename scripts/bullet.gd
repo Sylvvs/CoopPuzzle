@@ -4,6 +4,8 @@ var FUNCT: Callable
 var derivative: Callable
 var speed := 5.0
 var lifetime := 5.0
+var damage = 5
+var pierce = 1
 
 var elapsed_time := 0.0
 var arc_table := [] 
@@ -47,6 +49,9 @@ func _process(delta: float) -> void:
 	
 	if elapsed_time > lifetime:
 		queue_free()
+	
+	if pierce <= 0:
+		queue_free()
 
 func _get_x_from_arc(s: float) -> float:
 	if s <= 0.0:
@@ -57,9 +62,18 @@ func _get_x_from_arc(s: float) -> float:
 	var low := 0
 	var high := arc_table.size() - 1
 	while low < high:
-		var mid = (low + high) / 2
+		var mid = (low + high) / 2.0
 		if arc_table[mid]["s"] < s:
-			low = mid + 1
+			@warning_ignore("narrowing_conversion")
+			low = mid + 1.0
 		else:
+			@warning_ignore("narrowing_conversion")
 			high = mid
 	return arc_table[low]["x"]
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group('enemies'):
+		print('hello')
+		body.health -= damage
+		pierce -= 1

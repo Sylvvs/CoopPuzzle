@@ -13,5 +13,6 @@ script = ExtResource("1_g2els")
 shape = SubResource("CapsuleShape2D_u8vuu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5707964
 scale = Vector2(0.21484378, 0.21484378)
 texture = ExtResource("1_3vyb7")

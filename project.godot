@@ -23,6 +23,7 @@ InteractManager="*res://scripts/InteractManger.gd"
 [global_group]
 
 player=""
+enemies=""
 
 [input]
 
