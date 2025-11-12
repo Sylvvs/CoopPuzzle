@@ -1,7 +1,6 @@
 extends Area2D
 
 var FUNCT: Callable
-var derivative: Callable
 var speed := 5.0
 var lifetime := 5.0
 var damage = 5
@@ -12,9 +11,11 @@ var arc_table := []
 
 var total_length := 0.0
 var init_pos
+var init_rot
 
 func _ready() -> void:
 	init_pos = position;
+	rotation = init_rot
 	if FUNCT.is_valid():
 		_precompute_arc_length()
 
@@ -44,7 +45,15 @@ func _process(delta: float) -> void:
 	var x := _get_x_from_arc(distance)
 	var y = FUNCT.call(x)
 	
-	position = init_pos+ Vector2(x * 100, -y * 100).rotated(rotation)
+	var epsilon := 0.01
+	var dy = FUNCT.call(x + epsilon) - FUNCT.call(x - epsilon)
+	var dx = 2.0 * epsilon
+	var slope = dy / dx
+	
+	var angle := atan2(-slope, 1.0)
+	rotation = init_rot+angle
+	
+	position = init_pos+ Vector2(x * 100, -y * 100).rotated(init_rot)
 	
 	
 	if elapsed_time > lifetime:
@@ -74,6 +83,5 @@ func _get_x_from_arc(s: float) -> float:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group('enemies'):
-		print('hello')
 		body.health -= damage
 		pierce -= 1

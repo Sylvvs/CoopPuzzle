@@ -18,5 +18,5 @@ func summon_bullet():
 	var new_bullet = BULLET.instantiate()
 	new_bullet.FUNCT = Callable(self, "f")
 	new_bullet.position = get_parent().position+Vector2(25,0).rotated(get_parent().rotation)
-	new_bullet.rotation = get_parent().rotation
+	new_bullet.init_rot = get_parent().rotation
 	get_parent().get_parent().add_child(new_bullet)
