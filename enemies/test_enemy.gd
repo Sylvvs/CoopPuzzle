@@ -3,6 +3,7 @@ extends CharacterBody2D
 var player
 var health = 25
 
+const XP = preload("res://xp/xp.tscn")
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group('player')
@@ -18,10 +19,12 @@ func _physics_process(_delta: float) -> void:
 		position.y = move_toward(position.y,player.global_position.y,_delta*25)
 	if body != null and body.is_in_group('player'):
 		body.health -= 10
-		print(body.health)
 	move_and_slide()
 
 func _process(_delta: float) -> void:
 	pass
 	if health <= 0:
+		var xp = XP.instantiate()
+		xp.position = global_position
+		get_parent().get_parent().add_child(xp)
 		self.queue_free()

@@ -24,6 +24,7 @@ InteractManager="*res://scripts/InteractManger.gd"
 
 player=""
 enemies=""
+xp=""
 
 [input]
 
