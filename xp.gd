@@ -1,3 +1,1 @@
-extends Area2D
-
-var xp_value = 10
+extends Area2D; var xp_value = 10

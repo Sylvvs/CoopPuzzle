@@ -18,7 +18,8 @@ func _physics_process(_delta: float) -> void:
 		position.x = move_toward(position.x,player.global_position.x,_delta*25)
 		position.y = move_toward(position.y,player.global_position.y,_delta*25)
 	if body != null and body.is_in_group('player'):
-		body.health -= 10
+		#body.health -= 10
+		pass
 	move_and_slide()
 
 func _process(_delta: float) -> void:

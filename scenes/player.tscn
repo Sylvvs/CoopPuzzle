@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://f451jspvsyb4"]
+[gd_scene load_steps=6 format=3 uid="uid://f451jspvsyb4"]
 
 [ext_resource type="Texture2D" uid="uid://d23p4a5jv1mhn" path="res://sprites/icon.svg" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cbypn52c4cw4n" path="res://scenes/player.gd" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://go8wks4v1mog" path="res://scenes/Gun.tscn" id="3_qhqgy"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8vuu"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
+radius = 15.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
 radius = 59.03389
@@ -13,7 +15,7 @@ collision_mask = 2
 script = ExtResource("1_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_u8vuu")
+shape = SubResource("CircleShape2D_qhqgy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5707964
@@ -21,8 +23,12 @@ scale = Vector2(0.21484378, 0.21484378)
 texture = ExtResource("1_3vyb7")
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_g2els")
+
+[node name="Gun" parent="." instance=ExtResource("3_qhqgy")]
+position = Vector2(0, 0)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
