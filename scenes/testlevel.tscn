@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://b1lp30iyd6fco"]
+[gd_scene load_steps=25 format=4 uid="uid://b1lp30iyd6fco"]
 
 [ext_resource type="Texture2D" uid="uid://k54ffgc6l6q3" path="res://sprites/horror/Inside_D.png" id="1_hyqgw"]
 [ext_resource type="Texture2D" uid="uid://0rert5llgek2" path="res://sprites/horror/Inside_C.png" id="2_bx6wm"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bjgqwnsi6fr2k" path="res://enemies/test_enemy.tscn" id="10_o40l3"]
 [ext_resource type="PackedScene" uid="uid://bt8h5bukofmb6" path="res://scenes/UI Elements/XP&LVL.tscn" id="11_ifqpo"]
 [ext_resource type="PackedScene" uid="uid://c2ip06vkd8mby" path="res://xp/xp.tscn" id="11_ihbyj"]
+[ext_resource type="PackedScene" uid="uid://db5x82tfp6clh" path="res://scenes/enemyspawner.tscn" id="12_ifqpo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ifqpo"]
 texture = ExtResource("1_hyqgw")
@@ -7207,3 +7208,5 @@ position = Vector2(723, 241)
 position = Vector2(687, 402)
 
 [node name="Xp&lvl" parent="." instance=ExtResource("11_ifqpo")]
+
+[node name="EnemySpawner" parent="." instance=ExtResource("12_ifqpo")]
