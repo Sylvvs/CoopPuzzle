@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt8h5bukofmb6"]
+
+[ext_resource type="Script" uid="uid://dq5wf0pj2avaq" path="res://scripts/xp&lvl.gd" id="1_wneqc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ybi6s"]
+bg_color = Color(0.16565639, 0.16565642, 0.1656563, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hatmj"]
+bg_color = Color(0.10943233, 0.5775592, 0.23173839, 1)
+
+[node name="Xp&lvl" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_wneqc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+offset_right = 768.0
+offset_bottom = 27.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_ybi6s")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hatmj")
+show_percentage = false
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 25.0
+grow_horizontal = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/CenterContainer"]
+custom_minimum_size = Vector2(75, 25)
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1

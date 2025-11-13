@@ -53,6 +53,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 
 func level_up():
+	level += 1
 	xp -= level_up_requirement
 	level_up_requirement *= level_up_scaling
 	print('Level Up!')
