@@ -5,7 +5,7 @@ const BULLET = preload("res://scenes/bullet.tscn")
 var cooldown = 0;
 
 func f(x):
-	return sin(x)
+	return sin(2*x)
 
 func _process(delta: float) -> void:
 	var mouse = get_global_mouse_position()

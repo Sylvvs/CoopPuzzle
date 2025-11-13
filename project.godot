@@ -22,6 +22,8 @@ InteractManager="*res://scripts/InteractManger.gd"
 
 [display]
 
+window/size/viewport_width=768
+window/size/viewport_height=432
 window/stretch/mode="viewport"
 
 [global_group]

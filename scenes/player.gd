@@ -26,15 +26,20 @@ func _physics_process(_delta: float) -> void:
 		velocity.x -= SPEED
 	if Input.is_action_pressed('right'):
 		velocity.x += SPEED
-		
-	if Input.is_action_just_pressed('shoot'):
-		print('hej')
 	
 	velocity = velocity.limit_length(SPEED)
 	move_and_slide()
 	
+	if velocity.length() > 0:
+		animation_tree["parameters/conditions/walking"] = true
+		animation_tree["parameters/conditions/idle"] = false
+	else:
+		animation_tree["parameters/conditions/walking"] = false
+		animation_tree["parameters/conditions/idle"] = true
+	
 	var mouse_dir = (get_global_mouse_position() - global_position).normalized()
 	animation_tree["parameters/Walking/blend_position"] = Vector2(mouse_dir.x, -mouse_dir.y)
+	animation_tree["parameters/Idle/blend_position"] = Vector2(mouse_dir.x, -mouse_dir.y)
 	
 	if health <= 0:
 		get_tree().quit()
