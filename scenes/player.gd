@@ -10,12 +10,14 @@ var level_up_scaling = 1.8
 
 
 @onready var animation_tree = $AnimationTree
+@onready var levelPanel = $CanvasLayer/LevelUp
+@onready var upgradeOptions = $CanvasLayer/LevelUp/lbl_levelup
 
-func _process(_delta: float) -> void:
-	if xp >= level_up_requirement:
-		level_up()
+
+
 
 func _physics_process(_delta: float) -> void:
+	
 	velocity = Vector2.ZERO
 	
 	if Input.is_action_pressed("up"):
@@ -49,11 +51,17 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group('xp'):
 		xp += area.xp_value
 		area.queue_free()
-		print(xp)
+		if xp >= level_up_requirement:
+			level_up()
 
 
 func level_up():
 	level += 1
 	xp -= level_up_requirement
 	level_up_requirement *= level_up_scaling
-	print('Level Up!')
+	var tween = levelPanel.create_tween()
+	tween.tween_property(levelPanel,"position", Vector2(284,91),0.2).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_IN)
+	tween.play()
+	levelPanel.visible = true
+	get_tree().paused = true
+	

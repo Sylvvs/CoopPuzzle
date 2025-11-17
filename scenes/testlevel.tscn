@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://b1lp30iyd6fco"]
+[gd_scene load_steps=27 format=4 uid="uid://b1lp30iyd6fco"]
 
 [ext_resource type="Texture2D" uid="uid://k54ffgc6l6q3" path="res://sprites/horror/Inside_D.png" id="1_hyqgw"]
 [ext_resource type="Texture2D" uid="uid://0rert5llgek2" path="res://sprites/horror/Inside_C.png" id="2_bx6wm"]
@@ -9,9 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://f451jspvsyb4" path="res://scenes/player.tscn" id="7_bx6wm"]
 [ext_resource type="Script" uid="uid://bj24gumcic2lt" path="res://scripts/interacts/default.gd" id="7_fljaa"]
 [ext_resource type="PackedScene" uid="uid://bjgqwnsi6fr2k" path="res://enemies/test_enemy.tscn" id="10_o40l3"]
-[ext_resource type="PackedScene" uid="uid://bt8h5bukofmb6" path="res://scenes/UI Elements/XP&LVL.tscn" id="11_ifqpo"]
 [ext_resource type="PackedScene" uid="uid://c2ip06vkd8mby" path="res://xp/xp.tscn" id="11_ihbyj"]
 [ext_resource type="PackedScene" uid="uid://db5x82tfp6clh" path="res://scenes/enemyspawner.tscn" id="12_ifqpo"]
+[ext_resource type="Script" uid="uid://mfnrh5v2f7jc" path="res://scripts/enemy_info.gd" id="13_2bxju"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ifqpo"]
 texture = ExtResource("1_hyqgw")
@@ -7180,6 +7180,21 @@ sources/2 = SubResource("TileSetAtlasSource_xnipy")
 [sub_resource type="CircleShape2D" id="CircleShape2D_bx6wm"]
 radius = 80.0
 
+[sub_resource type="Resource" id="Resource_sc3w5"]
+script = ExtResource("13_2bxju")
+time_end = 60
+enemy = ExtResource("10_o40l3")
+enemy_num = 1
+enemy_spawn_delay = 1
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
+[sub_resource type="Resource" id="Resource_uows2"]
+script = ExtResource("13_2bxju")
+time_end = 20
+enemy = ExtResource("10_o40l3")
+enemy_num = 10
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMapLayer" parent="."]
@@ -7207,6 +7222,5 @@ position = Vector2(723, 241)
 [node name="xp" parent="." instance=ExtResource("11_ihbyj")]
 position = Vector2(687, 402)
 
-[node name="Xp&lvl" parent="." instance=ExtResource("11_ifqpo")]
-
 [node name="EnemySpawner" parent="." instance=ExtResource("12_ifqpo")]
+spawns = Array[ExtResource("13_2bxju")]([SubResource("Resource_sc3w5"), SubResource("Resource_uows2")])

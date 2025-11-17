@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6ll3o6yd4bpv"]
+
+[ext_resource type="Texture2D" uid="uid://bnqtwdruppq15" path="res://enemies/enemy sprites/Red_Circle_full.png" id="1_b5e2g"]
+
+[node name="ItemOption" type="ColorRect"]
+custom_minimum_size = Vector2(180, 50)
+anchors_preset = -1
+anchor_right = 0.23400001
+anchor_bottom = 0.116000004
+offset_right = 0.28799438
+offset_bottom = -0.11200333
+color = Color(0.47202516, 0.47202522, 0.47202516, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 26.0
+offset_bottom = 26.0
+color = Color(0, 0, 0, 1)
+
+[node name="ItemIcon" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 24.0
+texture = ExtResource("1_b5e2g")
+expand_mode = 1
+
+[node name="lbl_name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 2.0
+offset_right = 86.0
+offset_bottom = 25.0
+text = "Name"
+horizontal_alignment = 1
+
+[node name="lbl_description" type="Label" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 34.0
+offset_right = 89.0
+offset_bottom = 57.0
+
+[node name="lbl_level" type="Label" parent="."]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 6.0
+offset_right = 108.0
+offset_bottom = 29.0
