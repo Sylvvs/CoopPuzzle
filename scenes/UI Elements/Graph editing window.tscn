@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://ch0o7oq2o06bu" path="res://scripts/preview.gd" id="2_8o7j6"]
 
 [node name="GraphEditingWindow" type="Control"]
+process_mode = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
