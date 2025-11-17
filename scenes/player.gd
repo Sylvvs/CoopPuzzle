@@ -8,6 +8,7 @@ var level = 1
 var level_up_requirement = 10
 var level_up_scaling = 1.8
 var functions = ["Quadratic", "Exponential", "Potential", "Sine"]
+var func_params = {"Quadratic": {"A": 1, "B": 0, "C": 1}, "Exponential": {"A": 2, "B": 0.5}, "Potential": {"A": 1, "B": 1}, "Sine": {"A": 1, "B": 1, "C": 1, "D": 1}}
 
 
 @onready var animation_tree = $AnimationTree
@@ -23,6 +24,10 @@ func _ready() -> void:
 
 func graf_changed(func_ref: Callable):
 	gun.f = func_ref
+	gun.stats["Damage"] *= graph.difficulty_mult
+	gun.stats["Pierce"] = 1+(level/5)
+	print("Damage is now ", gun.stats["Damage"])
+	print("Pierce is now ", gun.stats["Pierce"])
 	
 
 func _physics_process(_delta: float) -> void:
@@ -69,7 +74,9 @@ func level_up():
 	xp -= level_up_requirement
 	level_up_requirement *= level_up_scaling
 	if level % 5 == 0 and not level > 20:
-		graph.load_graph(functions[(level/5)-1], {"A": 1, "B": 0, "C": 1, "D": 0})
+		var graph_name = functions[(level/5)-1]
+		graph.load_graph(graph_name, func_params[graph_name])
+		gun.stats["Damage"] = 5*((level/5)+1)
 	else:
 		var tween = levelPanel.create_tween()
 		tween.tween_property(levelPanel,"position", Vector2(284,91),0.2).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_IN)
