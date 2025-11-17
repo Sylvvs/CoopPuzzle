@@ -20,6 +20,7 @@ signal graph_updated(fun_ref: Callable)
 
 func _ready():
 	visible = true;
+	get_tree().paused = true;
 	close_button.pressed.connect(_close)
 	_show_popup()
 	load_graph("Linear", {"A": 1, "B": 1})
@@ -45,7 +46,8 @@ func _close():
 		return
 	
 	emit_signal("graph_updated", preview.func_ref)
-	queue_free()
+	get_tree().paused = false;
+	visible = false;
 
 
 func _build_param_ui():
