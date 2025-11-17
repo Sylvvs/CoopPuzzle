@@ -69,8 +69,8 @@ func _build_param_ui():
 
 		var box := SpinBox.new()
 		box.value = current_params[key]
-		box.min_value = -50
-		box.max_value = 50
+		box.min_value = -5
+		box.max_value = 5
 		box.step = 0.1
 		box.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 

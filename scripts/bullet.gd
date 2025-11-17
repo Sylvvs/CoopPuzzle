@@ -5,7 +5,8 @@ var stats := {"Speed": 5.0, "Lifetime": 5.0, "Damage": 5.0, "Pierce": 1}
 
 var elapsed_time := 0.0
 var arc_table := [] 
-var local_pierce = stats["Pierce"]
+var local_pierce
+var hit_enemies := []
 
 var total_length := 0.0
 var init_pos
@@ -14,6 +15,7 @@ var init_rot
 func _ready() -> void:
 	init_pos = position;
 	rotation = init_rot
+	local_pierce = stats["Pierce"]
 	if FUNCT.is_valid():
 		_precompute_arc_length()
 
@@ -80,6 +82,7 @@ func _get_x_from_arc(s: float) -> float:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group('enemies'):
+	if body.is_in_group('enemies') and not body in hit_enemies:
 		body.health -= stats["Damage"]
 		local_pierce -= 1
+		hit_enemies.append(body)
