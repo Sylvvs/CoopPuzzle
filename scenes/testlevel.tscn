@@ -10,8 +10,7 @@
 [ext_resource type="Script" uid="uid://bj24gumcic2lt" path="res://scripts/interacts/default.gd" id="7_fljaa"]
 [ext_resource type="PackedScene" uid="uid://bjgqwnsi6fr2k" path="res://enemies/test_enemy.tscn" id="10_o40l3"]
 [ext_resource type="PackedScene" uid="uid://c2ip06vkd8mby" path="res://xp/xp.tscn" id="11_ihbyj"]
-[ext_resource type="PackedScene" uid="uid://db5x82tfp6clh" path="res://scenes/enemyspawner.tscn" id="12_ifqpo"]
-[ext_resource type="Script" uid="uid://mfnrh5v2f7jc" path="res://scripts/enemy_info.gd" id="13_2bxju"]
+[ext_resource type="PackedScene" path="res://scenes/enemyspawner.tscn" id="12_ifqpo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ifqpo"]
 texture = ExtResource("1_hyqgw")
