@@ -71,12 +71,15 @@ func level_up():
 	tween.tween_property(levelPanel,"position", Vector2(284,91),0.2).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_IN)
 	tween.play()
 	levelPanel.visible = true
-	var options = 0
-	var optionsmax = 3
-	while options < optionsmax:
-		var option_choice = itemOptions.instantiate()
-		upgradeOptions.add_child(option_choice)
-		options = options + 1
+	if level % 5 == 0:
+		pass # make the graph editor visible type shit
+	else:
+		var options = 0
+		var optionsmax = 3
+		while options < optionsmax:
+			var option_choice = itemOptions.instantiate()
+			upgradeOptions.add_child(option_choice)
+			options = options + 1
 	get_tree().paused = true
 	
 func upgrade_character(upgrade):
