@@ -13,7 +13,6 @@ var level_up_scaling = 1.8
 @onready var levelPanel = $CanvasLayer/LevelUp
 @onready var upgradeOptions = $CanvasLayer/LevelUp/upgradeOptions
 @onready var itemOptions = preload("res://scenes/UI Elements/item_option.tscn")
-@onready var upgradeOptions = $CanvasLayer/LevelUp/lbl_levelup
 @onready var gun = $Gun
 @onready var graph = $CanvasLayer/GraphEditingWindow
 
@@ -80,7 +79,7 @@ func level_up():
 		options = options + 1
 	get_tree().paused = true
 	
-func _upgrade_character(upgrade):
+func upgrade_character(upgrade):
 	var option_children = upgradeOptions.get_children()
 	for i in option_children:
 		i.queue_free()

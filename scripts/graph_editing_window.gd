@@ -19,11 +19,12 @@ const COL_D = "#ffaa66"  # orange
 signal graph_updated(fun_ref: Callable)
 
 func _ready():
+	mouse_filter = Control.MOUSE_FILTER_STOP
 	visible = true;
 	get_tree().paused = true;
 	close_button.pressed.connect(_close)
 	_show_popup()
-	load_graph("Linear", {"A": 1, "B": 1})
+	load_graph("Exponential", {"A": 1, "B": 1, "C": 1, "D": 1})
 
 func load_graph(graph_type: String, params: Dictionary):
 	current_graph_type = graph_type
@@ -47,6 +48,7 @@ func _close():
 	
 	emit_signal("graph_updated", preview.func_ref)
 	get_tree().paused = false;
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	visible = false;
 
 

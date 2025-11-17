@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://buy3olm0abky4" path="res://scripts/fade_layer.gd" id="1_4vhkt"]
 
 [node name="Fadelayer" type="CanvasLayer"]
+process_mode = 2
 script = ExtResource("1_4vhkt")
 
 [node name="Fade" type="ColorRect" parent="."]

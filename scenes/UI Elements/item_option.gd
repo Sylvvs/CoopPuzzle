@@ -10,7 +10,7 @@ func _ready() -> void:
 	connect("selected_upgrade",Callable(player,"upgrade_character"))
 
 func _input(event):
-	if event.is_action('click'):
+	if event.is_action('click') or event.is_action('interact'):
 		if mouse_over:
 			emit_signal("selected_upgrade", item)
 
