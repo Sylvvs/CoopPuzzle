@@ -54,7 +54,7 @@ func _process(delta: float) -> void:
 	rotation = init_rot+angle
 	
 	position = init_pos+ Vector2(x * 100, -y * 100).rotated(init_rot)
-	
+	visible = true;
 	
 	if elapsed_time > lifetime:
 		queue_free()

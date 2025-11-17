@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://f451jspvsyb4"]
+[gd_scene load_steps=65 format=3 uid="uid://f451jspvsyb4"]
 
 [ext_resource type="Script" uid="uid://cbypn52c4cw4n" path="res://scenes/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://cqgypf3g0f1py" path="res://sprites/The Female Adventurer - Premium/Walk/Gun/walk_Gun_Down.png" id="2_d2wvv"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cq8bgwdio46st" path="res://sprites/The Female Adventurer - Premium/Attack/Gun/Shooting_Up_Right.png" id="18_ke2ow"]
 [ext_resource type="Texture2D" uid="uid://c0ab4ytwoshnj" path="res://sprites/The Female Adventurer - Premium/Attack/Gun/Shooting_Up.png" id="19_ujl30"]
 [ext_resource type="PackedScene" uid="uid://bt8h5bukofmb6" path="res://scenes/UI Elements/XP&LVL.tscn" id="21_i4ail"]
+[ext_resource type="PackedScene" uid="uid://curpmy3lye6jg" path="res://scenes/UI Elements/Graph editing window.tscn" id="22_a38lo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
 radius = 15.0
@@ -713,5 +714,8 @@ offset_left = 10.0
 offset_top = 50.0
 offset_right = 190.0
 offset_bottom = 100.0
+
+[node name="GraphEditingWindow" parent="CanvasLayer" instance=ExtResource("22_a38lo")]
+visible = false
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

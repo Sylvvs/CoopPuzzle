@@ -19,6 +19,7 @@ const COL_D = "#ffaa66"  # orange
 signal graph_updated(fun_ref: Callable)
 
 func _ready():
+	visible = true;
 	close_button.pressed.connect(_close)
 	_show_popup()
 	load_graph("Linear", {"A": 1, "B": 1})

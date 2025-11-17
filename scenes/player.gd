@@ -13,9 +13,17 @@ var level_up_scaling = 1.8
 @onready var levelPanel = $CanvasLayer/LevelUp
 @onready var upgradeOptions = $CanvasLayer/LevelUp/upgradeOptions
 @onready var itemOptions = preload("res://scenes/UI Elements/item_option.tscn")
+@onready var upgradeOptions = $CanvasLayer/LevelUp/lbl_levelup
+@onready var gun = $Gun
+@onready var graph = $CanvasLayer/GraphEditingWindow
 
 
+func _ready() -> void:
+	graph.graph_updated.connect(graf_changed)
 
+func graf_changed(func_ref: Callable):
+	gun.f = func_ref
+	
 
 func _physics_process(_delta: float) -> void:
 	
