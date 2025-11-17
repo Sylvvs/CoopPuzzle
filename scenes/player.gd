@@ -11,7 +11,8 @@ var level_up_scaling = 1.8
 
 @onready var animation_tree = $AnimationTree
 @onready var levelPanel = $CanvasLayer/LevelUp
-@onready var upgradeOptions = $CanvasLayer/LevelUp/lbl_levelup
+@onready var upgradeOptions = $CanvasLayer/LevelUp/upgradeOptions
+@onready var itemOptions = preload("res://scenes/UI Elements/item_option.tscn")
 
 
 
@@ -63,5 +64,18 @@ func level_up():
 	tween.tween_property(levelPanel,"position", Vector2(284,91),0.2).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_IN)
 	tween.play()
 	levelPanel.visible = true
+	var options = 0
+	var optionsmax = 3
+	while options < optionsmax:
+		var option_choice = itemOptions.instantiate()
+		upgradeOptions.add_child(option_choice)
+		options = options + 1
 	get_tree().paused = true
 	
+func _upgrade_character(upgrade):
+	var option_children = upgradeOptions.get_children()
+	for i in option_children:
+		i.queue_free()
+	levelPanel.visible = false
+	levelPanel.position = Vector2(800,50)
+	get_tree().paused = false
