@@ -7,6 +7,7 @@ var xp = 0
 var level = 1
 var level_up_requirement = 10
 var level_up_scaling = 1.8
+var functions = ["Quadratic", "Exponential", "Potential", "Sine"]
 
 
 @onready var animation_tree = $AnimationTree
@@ -67,13 +68,13 @@ func level_up():
 	level += 1
 	xp -= level_up_requirement
 	level_up_requirement *= level_up_scaling
-	var tween = levelPanel.create_tween()
-	tween.tween_property(levelPanel,"position", Vector2(284,91),0.2).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_IN)
-	tween.play()
-	levelPanel.visible = true
-	if level % 5 == 0:
-		graph.load_graph("Quadratic", {"A": 1, "B": 0, "C": 1})
+	if level % 5 == 0 and not level > 20:
+		graph.load_graph(functions[(level/5)-1], {"A": 1, "B": 0, "C": 1, "D": 0})
 	else:
+		var tween = levelPanel.create_tween()
+		tween.tween_property(levelPanel,"position", Vector2(284,91),0.2).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_IN)
+		tween.play()
+		levelPanel.visible = true
 		var options = 0
 		var optionsmax = 3
 		while options < optionsmax:
