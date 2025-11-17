@@ -717,5 +717,6 @@ offset_bottom = 100.0
 
 [node name="GraphEditingWindow" parent="CanvasLayer" instance=ExtResource("22_a38lo")]
 visible = false
+mouse_filter = 0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

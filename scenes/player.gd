@@ -72,7 +72,7 @@ func level_up():
 	tween.play()
 	levelPanel.visible = true
 	if level % 5 == 0:
-		pass # make the graph editor visible type shit
+		graph.load_graph("Quadratic", {"A": 1, "B": 0, "C": 1})
 	else:
 		var options = 0
 		var optionsmax = 3
