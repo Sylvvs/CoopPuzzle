@@ -34,7 +34,7 @@ func load_graph(graph_type: String, params: Dictionary):
 	current_params = params.duplicate()
 
 	graph_type_label.text = _get_function_string()
-	diff_label.text = "Current difficulty multiplier: %s" % difficulty_mult;
+	diff_label.text = "Current damage multiplier: %s" % difficulty_mult;
 	_build_param_ui()
 	_update_preview()
 
@@ -83,7 +83,7 @@ func _build_param_ui():
 
 func _on_param_changed(new_val: float, key: String):
 	current_params[key] = new_val
-	diff_label.text = "Current difficulty multiplier: %s" % difficulty_mult;
+	diff_label.text = "Current damage multiplier: %s" % difficulty_mult;
 	error_label.visible = false;
 	graph_type_label.text = _get_function_string()
 	_update_preview()
