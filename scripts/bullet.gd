@@ -1,13 +1,11 @@
 extends Area2D
 
 var FUNCT: Callable
-var speed := 5.0
-var lifetime := 5.0
-var damage = 5
-var pierce = 1
+var stats := {"Speed": 5.0, "Lifetime": 5.0, "Damage": 5.0, "Pierce": 1}
 
 var elapsed_time := 0.0
 var arc_table := [] 
+var local_pierce = stats["Pierce"]
 
 var total_length := 0.0
 var init_pos
@@ -40,7 +38,7 @@ func _process(delta: float) -> void:
 		return
 
 	elapsed_time += delta
-	var distance := elapsed_time * speed
+	var distance = elapsed_time * stats["Speed"]
 
 	var x := _get_x_from_arc(distance)
 	var y = FUNCT.call(x)
@@ -56,10 +54,10 @@ func _process(delta: float) -> void:
 	position = init_pos+ Vector2(x * 100, -y * 100).rotated(init_rot)
 	visible = true;
 	
-	if elapsed_time > lifetime:
+	if elapsed_time > stats["Lifetime"]:
 		queue_free()
 	
-	if pierce <= 0:
+	if local_pierce <= 0:
 		queue_free()
 
 func _get_x_from_arc(s: float) -> float:
@@ -83,5 +81,5 @@ func _get_x_from_arc(s: float) -> float:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group('enemies'):
-		body.health -= damage
-		pierce -= 1
+		body.health -= stats["Damage"]
+		local_pierce -= 1

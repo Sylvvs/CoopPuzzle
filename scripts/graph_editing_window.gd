@@ -5,10 +5,12 @@ extends Control
 @onready var graph_type_label := $MarginContainer/HBoxContainer/LeftPanel/Func
 @onready var close_button := $MarginContainer/Close
 @onready var error_label := $Warning
+@onready var diff_label := $MarginContainer/HBoxContainer/LeftPanel/Difficulty
 
 var current_graph_type := ""
 var current_params := {}
 var param_base := {"A": 1, "B": 1, "C": 1, "D": 1}
+var difficulty_mult := 1.0
 
 const COL_A = "#ff6666"  # red-ish
 const COL_B = "#66aaff"  # blue
@@ -23,8 +25,7 @@ func _ready():
 	visible = true;
 	get_tree().paused = true;
 	close_button.pressed.connect(_close)
-	_show_popup()
-	load_graph("Linear", {"A": 1, "B": 1, "C": 1, "D": 1})
+	load_graph("Linear", {"A": 1, "B": 0})
 
 func load_graph(graph_type: String, params: Dictionary):
 	visible = true;
@@ -33,6 +34,7 @@ func load_graph(graph_type: String, params: Dictionary):
 	current_params = params.duplicate()
 
 	graph_type_label.text = _get_function_string()
+	diff_label.text = "Current difficulty multiplier: %s" % difficulty_mult;
 	_build_param_ui()
 	_update_preview()
 
@@ -81,6 +83,7 @@ func _build_param_ui():
 
 func _on_param_changed(new_val: float, key: String):
 	current_params[key] = new_val
+	diff_label.text = "Current difficulty multiplier: %s" % difficulty_mult;
 	error_label.visible = false;
 	graph_type_label.text = _get_function_string()
 	_update_preview()
@@ -104,7 +107,9 @@ func _update_preview():
 		"Potential":
 			preview.set_function(func(x): return pow(x, A) * B)
 		_:
-			preview.set_function(func(x): return 0)
+			preview.set_function(func(_x): return 0)
+			
+	_update_difficulty(A, B, C, D)
 
 
 func _graph_is_centered(tolerance := 0.5) -> bool:
@@ -146,6 +151,27 @@ func _get_function_string() -> String:
 			return "f(x) = (x^%s)·%s" % [_c(p["A"], COL_A), _c(p["B"], COL_B)]
 		_:
 			return "f(x) = ?"
+
+func _update_difficulty(A: float, B: float, _C: float, _D: float):
+	var diff := 1.0
+
+	match current_graph_type:
+		"Sine":
+			diff += 1.0 / sqrt(abs(A)+0.1)
+		"Linear":
+			diff += sqrt(abs(A))
+		"Quadratic":
+			diff += sqrt(abs(A)) * 0.2 + sqrt(abs(B)) * 0.5
+		"Exponential":
+			diff += sqrt(abs(A))
+		"Potential":
+			diff += 2.0 / sqrt(max(0.01, A))
+		_:
+			diff = 1.0
+
+	difficulty_mult = max(1.0, diff)
+	difficulty_mult = snapped(difficulty_mult, 0.01)
+
 
 
 func _c(num: float, color: String) -> String:

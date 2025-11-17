@@ -1,6 +1,6 @@
 extends Control
 
-var func_ref: Callable = func(x): return 0
+var func_ref: Callable = func(_x): return 0
 
 func set_function(f: Callable):
 	func_ref = f

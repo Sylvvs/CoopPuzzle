@@ -4,6 +4,7 @@ const BULLET = preload("res://scenes/bullet.tscn")
 
 var cooldown = 0;
 var cooldown_timer = 0.2
+var stats := {"Speed": 5.0, "Lifetime": 5.0, "Damage": 5.0, "Pierce": 1}
 
 var f: Callable = func(x): return sin(2*x)
 
@@ -22,6 +23,7 @@ func _process(delta: float) -> void:
 
 func summon_bullet():
 	var new_bullet = BULLET.instantiate()
+	new_bullet.stats = stats;
 	new_bullet.visible = false;
 	new_bullet.FUNCT = f
 	new_bullet.position = get_parent().position+Vector2(25,0).rotated(rotation)
