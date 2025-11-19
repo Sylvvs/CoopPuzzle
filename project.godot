@@ -19,6 +19,7 @@ config/icon="res://sprites/icon.svg"
 
 FadeLayer="*res://scenes/logic/FadeLayer.tscn"
 InteractManager="*res://scripts/InteractManger.gd"
+DatabaseHandler="*res://scripts/DatabaseHandler.gd"
 
 [display]
 
