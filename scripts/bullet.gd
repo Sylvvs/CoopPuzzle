@@ -86,5 +86,6 @@ func _get_x_from_arc(s: float) -> float:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group('enemies') and not body in hit_enemies:
 		body.health -= local_damage
+		body.anim.play('Hit')
 		local_pierce -= 1
 		hit_enemies.append(body)

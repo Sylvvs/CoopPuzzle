@@ -6,6 +6,8 @@ var player
 @export var XP: PackedScene
 @export var damage = 10
 
+@onready var anim = $AnimationPlayer
+
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group('player')
 	
