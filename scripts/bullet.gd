@@ -13,6 +13,11 @@ var total_length := 0.0
 var init_pos
 var init_rot
 
+@onready var damage_number = preload("res://scenes/UI Elements/lbl_damagenumber.tscn")
+
+
+
+
 func _ready() -> void:
 	init_pos = position;
 	rotation = init_rot
@@ -89,3 +94,7 @@ func _on_body_entered(body: Node2D) -> void:
 		body.anim.play('Hit')
 		local_pierce -= 1
 		hit_enemies.append(body)
+		var dmg_num = damage_number.instantiate()
+		dmg_num.position = global_position
+		dmg_num.text = str(local_damage)
+		get_parent().add_child(dmg_num)

@@ -1,5 +1,8 @@
-[gd_scene format=3 uid="uid://8208wsfm2k7y"]
+[gd_scene load_steps=2 format=3 uid="uid://8208wsfm2k7y"]
+
+[ext_resource type="Script" uid="uid://ck1iv15sm15tt" path="res://scenes/UI Elements/lbl_damagenumber.gd" id="1_kqx87"]
 
 [node name="lbl_damagenumber" type="Label"]
 offset_right = 40.0
 offset_bottom = 23.0
+script = ExtResource("1_kqx87")
