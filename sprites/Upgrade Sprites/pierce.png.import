@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vtnniopa6vs1"
-path="res://.godot/imported/skill_icons10.png-e09879c5d2435bea1be39a3c30087bb4.ctex"
+uid="uid://caa3loxa7picx"
+path="res://.godot/imported/pierce.png-ec08cd05442ad0800fe7dd3a1e344c4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Upgrade Sprites/skill_icons10.png"
-dest_files=["res://.godot/imported/skill_icons10.png-e09879c5d2435bea1be39a3c30087bb4.ctex"]
+source_file="res://sprites/Upgrade Sprites/pierce.png"
+dest_files=["res://.godot/imported/pierce.png-ec08cd05442ad0800fe7dd3a1e344c4a.ctex"]
 
 [params]
 

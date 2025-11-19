@@ -3,7 +3,7 @@ extends Node2D
 const BULLET = preload("res://scenes/bullet.tscn")
 
 var cooldown = 0;
-var stats := {"Speed": 5.0, "Lifetime": 5.0, "Damage": 5.0, "Pierce": 1, "Cooldown_Timer": 0.2}
+var stats := {"Speed": 5.0, "Lifetime": 5.0, "Damage": 5.0, "Pierce": 1, "Cooldown_Timer": 0.2, "difficulty_mult": 1.0}
 
 var f: Callable = func(x): return sin(2*x)
 

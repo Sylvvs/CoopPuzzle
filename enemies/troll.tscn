@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cusaxoy7vai4h"]
+[gd_scene load_steps=8 format=3 uid="uid://chcde7nhetqvb"]
 
 [ext_resource type="Script" uid="uid://bb31720s0lbpe" path="res://enemies/test_enemy.gd" id="1_l3jnk"]
-[ext_resource type="PackedScene" path="res://xp/xp_blue.tscn" id="2_8u0of"]
+[ext_resource type="PackedScene" uid="uid://b8d07pondnk8f" path="res://xp/xp_blue.tscn" id="2_8u0of"]
 [ext_resource type="Texture2D" uid="uid://xqky8he6tgel" path="res://enemies/enemy sprites/Monster Sprites/00.png" id="2_l3jnk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l3jnk"]
@@ -24,7 +24,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_l3jnk"]
-resource_name = "hit"
+resource_name = "Hit"
 length = 0.8750125
 step = 0.125
 tracks/0/type = "value"
@@ -42,8 +42,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8u0of"]
 _data = {
-&"RESET": SubResource("Animation_8u0of"),
-&"hit": SubResource("Animation_l3jnk")
+&"Hit": SubResource("Animation_l3jnk"),
+&"RESET": SubResource("Animation_8u0of")
 }
 
 [node name="Trold" type="CharacterBody2D" groups=["enemies"]]

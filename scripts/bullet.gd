@@ -1,11 +1,12 @@
 extends Area2D
 
 var FUNCT: Callable
-var stats := {"Speed": 5.0, "Lifetime": 5.0, "Damage": 5.0, "Pierce": 1}
+var stats := {"Speed": 5.0, "Lifetime": 5.0, "Damage": 5.0, "Pierce": 1, "difficulty_mult" : 1}
 
 var elapsed_time := 0.0
 var arc_table := [] 
 var local_pierce
+var local_damage
 var hit_enemies := []
 
 var total_length := 0.0
@@ -15,6 +16,7 @@ var init_rot
 func _ready() -> void:
 	init_pos = position;
 	rotation = init_rot
+	local_damage = stats["Damage"] * stats["difficulty_mult"]
 	local_pierce = stats["Pierce"]
 	if FUNCT.is_valid():
 		_precompute_arc_length()
@@ -83,6 +85,7 @@ func _get_x_from_arc(s: float) -> float:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group('enemies') and not body in hit_enemies:
-		body.health -= stats["Damage"]
+		body.health -= local_damage
+		body.anim.play('Hit')
 		local_pierce -= 1
 		hit_enemies.append(body)
