@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caa3loxa7picx"
-path="res://.godot/imported/skill_icons33.png-f93e906a1c430d7071b96694d58ed56a.ctex"
+uid="uid://bgvckot1f6t31"
+path="res://.godot/imported/magictome.png-6ca7b95bc2487eaeb28913a76d21a64d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Upgrade Sprites/skill_icons33.png"
-dest_files=["res://.godot/imported/skill_icons33.png-f93e906a1c430d7071b96694d58ed56a.ctex"]
+source_file="res://sprites/Upgrade Sprites/magictome.png"
+dest_files=["res://.godot/imported/magictome.png-6ca7b95bc2487eaeb28913a76d21a64d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c61cd8b6xlmub"
-path="res://.godot/imported/skill_icons16.png-4d2ec66680ebb31191dcc27fa2679bdd.ctex"
+uid="uid://df3hocv2s3aem"
+path="res://.godot/imported/armor.png-202c708daa368ff3219688b63b994c6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Upgrade Sprites/skill_icons16.png"
-dest_files=["res://.godot/imported/skill_icons16.png-4d2ec66680ebb31191dcc27fa2679bdd.ctex"]
+source_file="res://sprites/Upgrade Sprites/armor.png"
+dest_files=["res://.godot/imported/armor.png-202c708daa368ff3219688b63b994c6c.ctex"]
 
 [params]
 
