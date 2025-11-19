@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct4ln51d0tnoj"]
+
+[ext_resource type="Script" uid="uid://cs3pdehdkdle6" path="res://xp.gd" id="1_vucbj"]
+[ext_resource type="Texture2D" uid="uid://q1cur85qnbhm" path="res://xp/Gem_green.png" id="2_ek6cx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v1btw"]
+radius = 7.0
+
+[node name="XpGreen" type="Area2D"]
+script = ExtResource("1_vucbj")
+xp_value = 50
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_v1btw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_ek6cx")
