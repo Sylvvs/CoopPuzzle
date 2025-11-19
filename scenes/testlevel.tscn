@@ -7192,8 +7192,7 @@ script = ExtResource("13_2bxju")
 time_start = 15
 time_end = 10000
 enemy = ExtResource("13_uows2")
-enemy_num = 5
-enemy_spawn_delay = 5
+enemy_num = 15
 metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
 
 [node name="Node2D" type="Node2D"]
