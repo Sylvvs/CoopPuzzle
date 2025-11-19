@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://f451jspvsyb4"]
+[gd_scene load_steps=67 format=3 uid="uid://f451jspvsyb4"]
 
 [ext_resource type="Script" uid="uid://cbypn52c4cw4n" path="res://scenes/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://cqgypf3g0f1py" path="res://sprites/The Female Adventurer - Premium/Walk/Gun/walk_Gun_Down.png" id="2_d2wvv"]
@@ -28,7 +28,10 @@
 radius = 15.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
-radius = 59.03389
+radius = 15.132746
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ni07"]
+radius = 54.00926
 
 [sub_resource type="Animation" id="Animation_i4ail"]
 length = 0.001
@@ -652,7 +655,6 @@ collision_mask = 2
 script = ExtResource("1_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("CircleShape2D_qhqgy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -661,10 +663,14 @@ region_enabled = true
 region_rect = Rect2(0, 0, 48, 64)
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_g2els")
+
+[node name="XPpickuprange" type="Area2D" parent="." groups=["xp_pickuprange"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="XPpickuprange"]
+shape = SubResource("CircleShape2D_4ni07")
 
 [node name="Gun" parent="." instance=ExtResource("3_qhqgy")]
 visible = false

@@ -31,6 +31,7 @@ window/stretch/mode="viewport"
 player=""
 enemies=""
 xp=""
+xp_pickuprange=""
 
 [input]
 
