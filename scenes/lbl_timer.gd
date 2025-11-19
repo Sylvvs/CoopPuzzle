@@ -9,6 +9,6 @@ func _process(delta: float) -> void:
 	time_elapsed += delta
 
 	var total_seconds = int(time_elapsed)
-	displayed_minutes = total_seconds / 60
+	displayed_minutes = total_seconds / 60.0
 	displayed_seconds = total_seconds % 60
 	$".".text = "%02d:%02d" % [displayed_minutes, displayed_seconds]
