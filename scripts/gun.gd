@@ -3,8 +3,7 @@ extends Node2D
 const BULLET = preload("res://scenes/bullet.tscn")
 
 var cooldown = 0;
-var cooldown_timer = 0.2
-var stats := {"Speed": 5.0, "Lifetime": 5.0, "Damage": 5.0, "Pierce": 1}
+var stats := {"Speed": 5.0, "Lifetime": 5.0, "Damage": 5.0, "Pierce": 1, "Cooldown_Timer": 0.2}
 
 var f: Callable = func(x): return sin(2*x)
 
@@ -15,7 +14,7 @@ func _process(delta: float) -> void:
 	rotation = to_mouse.angle()
 	position = Vector2(28,0).rotated(rotation)
 
-	if cooldown > cooldown_timer:
+	if cooldown > stats["Cooldown_Timer"]:
 		cooldown = 0
 		summon_bullet()
 	
