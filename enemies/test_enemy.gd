@@ -1,9 +1,10 @@
 extends CharacterBody2D
 
 var player
-var health = 25
-
-const XP = preload("res://xp/xp.tscn")
+@export var health = 25
+@export var speed = 25
+@export var XP = preload("res://xp/xp.tscn")
+@export var damage = 10
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group('player')
@@ -15,15 +16,14 @@ func _physics_process(_delta: float) -> void:
 		var collision = get_slide_collision(i)
 		body = collision.get_collider()
 	if body == null or !body.is_in_group('player'):
-		position.x = move_toward(position.x,player.global_position.x,_delta*25)
-		position.y = move_toward(position.y,player.global_position.y,_delta*25)
+		position.x = move_toward(position.x,player.global_position.x,_delta*speed)
+		position.y = move_toward(position.y,player.global_position.y,_delta*speed)
 	if body != null and body.is_in_group('player'):
-		#body.health -= 10
+		#body.health -= damage
 		pass
 	move_and_slide()
 
 func _process(_delta: float) -> void:
-	pass
 	if health <= 0:
 		var xp = XP.instantiate()
 		xp.position = global_position
