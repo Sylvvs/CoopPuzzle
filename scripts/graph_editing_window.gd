@@ -157,7 +157,7 @@ func _update_difficulty(A: float, B: float, _C: float, _D: float):
 
 	match current_graph_type:
 		"Sine":
-			diff += 1.0 / sqrt(abs(A)+0.1)
+			diff += 1.0 / sqrt(abs(abs(A)-2.5)+0.1) + 1.0 / sqrt(abs(abs(B)-1)+0.5)
 		"Linear":
 			diff += sqrt(abs(A))
 		"Quadratic":
