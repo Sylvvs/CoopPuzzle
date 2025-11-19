@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vtnniopa6vs1"
-path="res://.godot/imported/skill_icons10.png-e09879c5d2435bea1be39a3c30087bb4.ctex"
+path="res://.godot/imported/food.png-3e1df44bf6736991998e874a0b917c17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Upgrade Sprites/skill_icons10.png"
-dest_files=["res://.godot/imported/skill_icons10.png-e09879c5d2435bea1be39a3c30087bb4.ctex"]
+source_file="res://sprites/Upgrade Sprites/food.png"
+dest_files=["res://.godot/imported/food.png-3e1df44bf6736991998e874a0b917c17.ctex"]
 
 [params]
 

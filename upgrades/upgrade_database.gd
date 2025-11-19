@@ -248,6 +248,7 @@ const UPGRADES = {
 		"details": "This food will heal you",
 		"level": "",
 		"prerequisite": [],
-		"type": "item"
+		"type": "item",
+		"icon": ICON_PATH + "food.png"
 	}
 }

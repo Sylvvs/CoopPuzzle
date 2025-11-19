@@ -30,7 +30,7 @@ func _ready() -> void:
 
 func graf_changed(func_ref: Callable):
 	gun.f = func_ref
-	gun.stats["Damage"] *= graph.difficulty_mult
+	gun.stats["difficulty_mult"] *= graph.difficulty_mult
 	#gun.stats["Pierce"] = 1+(level/5)
 	print("Damage is now ", gun.stats["Damage"])
 	print("Pierce is now ", gun.stats["Pierce"])

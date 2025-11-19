@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://c0ab4ytwoshnj" path="res://sprites/The Female Adventurer - Premium/Attack/Gun/Shooting_Up.png" id="19_ujl30"]
 [ext_resource type="PackedScene" uid="uid://bt8h5bukofmb6" path="res://scenes/UI Elements/XP&LVL.tscn" id="21_i4ail"]
 [ext_resource type="PackedScene" uid="uid://curpmy3lye6jg" path="res://scenes/UI Elements/Graph editing window.tscn" id="22_a38lo"]
-[ext_resource type="Script" uid="uid://drge24gwg0f51" path="res://scenes/lbl_timer.gd" id="23_4ni07"]
+[ext_resource type="Script" path="res://scenes/lbl_timer.gd" id="23_4ni07"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
 radius = 15.0

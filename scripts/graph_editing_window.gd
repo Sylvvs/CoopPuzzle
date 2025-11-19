@@ -37,6 +37,7 @@ func load_graph(graph_type: String, params: Dictionary):
 	diff_label.text = "Current damage multiplier: %s" % difficulty_mult;
 	_build_param_ui()
 	_update_preview()
+	diff_label.text = "Current damage multiplier: %s" % difficulty_mult;
 
 func _show_popup():
 	modulate = Color(1,1,1,0)
@@ -87,6 +88,7 @@ func _on_param_changed(new_val: float, key: String):
 	error_label.visible = false;
 	graph_type_label.text = _get_function_string()
 	_update_preview()
+	diff_label.text = "Current damage multiplier: %s" % difficulty_mult;
 
 
 func _update_preview():
