@@ -16,5 +16,5 @@ func _on_area_entered(area: Area2D) -> void:
 
 func _process(_delta: float) -> void:
 	if picked_up:
-		position.x = move_toward(position.x,player.global_position.x,_delta*75)
-		position.y = move_toward(position.y,player.global_position.y,_delta*75)
+		position.x = move_toward(position.x,player.global_position.x,_delta*150)
+		position.y = move_toward(position.y,player.global_position.y,_delta*150)

@@ -96,5 +96,5 @@ func _on_body_entered(body: Node2D) -> void:
 		hit_enemies.append(body)
 		var dmg_num = damage_number.instantiate()
 		dmg_num.position = global_position
-		dmg_num.text = str(local_damage)
+		dmg_num.text = str(local_damage).pad_decimals(0)
 		get_parent().add_child(dmg_num)
