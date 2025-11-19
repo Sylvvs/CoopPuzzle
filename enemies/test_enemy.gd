@@ -3,7 +3,7 @@ extends CharacterBody2D
 var player
 @export var health = 25
 @export var speed = 25
-@export var XP = preload("res://xp/xp.tscn")
+@export var XP: PackedScene
 @export var damage = 10
 
 func _ready() -> void:
