@@ -19,7 +19,7 @@ func _ready() -> void:
 	lblName.text = UpgradeDatabase.UPGRADES[item]["displayname"]
 	lblDescription.text = UpgradeDatabase.UPGRADES[item]["details"]
 	lblLevel.text = UpgradeDatabase.UPGRADES[item]["level"]
-	#itemIcon.texture = load(UpgradeDatabase.UPGRADES[item]["icon"])
+	itemIcon.texture = load(UpgradeDatabase.UPGRADES[item]["icon"])
 	
 
 func _input(event):
