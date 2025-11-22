@@ -62,3 +62,9 @@ func _on_submit_pressed() -> void:
 	var text = namefield.text.to_upper()
 	var score = get_parent().get_node("lbl_timer").time_elapsed
 	DatabaseHandler.add_highscore(int(score), text)
+
+
+func _on_retry_pressed() -> void:
+	get_tree().paused = false
+	red_abov.visible = false
+	get_tree().root.get_node("/root/SceneHandler").load_scene("testlevel")

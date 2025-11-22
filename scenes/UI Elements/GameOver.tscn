@@ -65,3 +65,4 @@ layout_mode = 2
 text = "RETRY?"
 
 [connection signal="pressed" from="red_abov/Margins/ContentHolder/SubmitScore/Submit" to="." method="_on_submit_pressed"]
+[connection signal="pressed" from="red_abov/Margins/ContentHolder/Retry" to="." method="_on_retry_pressed"]
