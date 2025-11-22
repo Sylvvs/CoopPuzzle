@@ -4,6 +4,7 @@
 
 [node name="Fadelayer" type="CanvasLayer"]
 process_mode = 2
+visible = false
 script = ExtResource("1_4vhkt")
 
 [node name="Fade" type="ColorRect" parent="."]

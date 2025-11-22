@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://mqwxbk460fnp"]
+
+[ext_resource type="Script" uid="uid://3qrqq5bajxuq" path="res://scripts/game_over.gd" id="1_u6geq"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u6geq")
+
+[node name="red_abov" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="Red" type="ColorRect" parent="red_abov"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7390004, 0, 0, 0.49803922)
+
+[node name="Margins" type="MarginContainer" parent="red_abov"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 250
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 250
+theme_override_constants/margin_bottom = 25
+
+[node name="ContentHolder" type="VBoxContainer" parent="red_abov/Margins"]
+layout_mode = 2
+
+[node name="Leaderboard" type="VBoxContainer" parent="red_abov/Margins/ContentHolder"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SubmitScore" type="HBoxContainer" parent="red_abov/Margins/ContentHolder"]
+layout_mode = 2
+
+[node name="NameField" type="LineEdit" parent="red_abov/Margins/ContentHolder/SubmitScore"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "NAME"
+alignment = 1
+
+[node name="Submit" type="Button" parent="red_abov/Margins/ContentHolder/SubmitScore"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SUBMIT SCORE"
+
+[node name="Retry" type="Button" parent="red_abov/Margins/ContentHolder"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "RETRY?"
