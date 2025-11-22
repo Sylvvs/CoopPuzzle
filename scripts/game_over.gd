@@ -14,14 +14,12 @@ func fade_in():
 
 func _on_highscores_received(scores: Array):
 
-	leaderboard_container.queue_free_children()
-
 	for score_entry in scores:
-		var name = score_entry.get("name", "Unknown")
+		var playername = score_entry.get("name", "Unknown")
 		var score = score_entry.get("score", 0)
 		
 		var label = Label.new()
-		label.text = "%s - %d" % [name, score]
+		label.text = playername + " - " + str(score)
 		leaderboard_container.add_child(label)
 		
 	print("Leaderboard updated!")
