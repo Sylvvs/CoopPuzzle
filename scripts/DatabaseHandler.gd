@@ -13,6 +13,7 @@ var is_requesting: bool = false
 signal highscores_received(scores)
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(http_request)
 	http_request.connect("request_completed", Callable(self, "_http_request_completed"))
 	print("Highscore system ready.")
@@ -29,6 +30,12 @@ func _process(_delta):
 
 func _send_request(req: Dictionary):
 	var client := HTTPClient.new()
+	
+	if req["command"] == "getHighscores2":
+		emit_signal("highscores_received", [{"name": "SYLV", "score": 50}, {"name": "MAFFE", "score": 1}])
+		print("hijacking the leaderboard system rn. check databasehandler line 33")
+		is_requesting = false;
+		return
 	
 	var encoded_data = client.query_string_from_dict(req["data"])
 	var body = "command=" + req["command"] + "&" + encoded_data

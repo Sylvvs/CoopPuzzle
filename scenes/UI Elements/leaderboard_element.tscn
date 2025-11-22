@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://4y7aqpdbabd1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arlue"]
+bg_color = Color(0.24115604, 0.24115607, 0.24115595, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.033853274, 0.03385329, 0.033853233, 1)
+
+[node name="LeaderboardElement" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_arlue")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "meee :P"
+
+[node name="Score" type="Label" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "500 bajillion"

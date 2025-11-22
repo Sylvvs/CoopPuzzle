@@ -1,7 +1,7 @@
 extends CharacterBody2D
 var SPEED = 100.0
 
-var health = 100
+var health = 00
 var max_health = 100
 
 var xp = 0
@@ -23,6 +23,7 @@ var spell_cooldown = 0
 @onready var itemOptions = preload("res://scenes/UI Elements/item_option.tscn")
 @onready var gun = $Gun
 @onready var graph = $CanvasLayer/GraphEditingWindow
+@onready var gameover = $CanvasLayer/GameOver
 
 
 func _ready() -> void:
@@ -64,7 +65,7 @@ func _physics_process(_delta: float) -> void:
 	animation_tree["parameters/Idle/blend_position"] = Vector2(mouse_dir.x, -mouse_dir.y)
 	
 	if health <= 0:
-		get_tree().quit()
+		gameover.fade_in()
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
