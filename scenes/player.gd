@@ -26,10 +26,13 @@ var spell_cooldown = 0
 @onready var gameover = $CanvasLayer/GameOver
 @onready var xp_range = $XPpickuprange/CollisionShape2D
 @onready var lvl_up_sound = $AudioStreamPlayer
+@onready var hp_bar = $CanvasLayer/ProgressBar
 
 
 func _ready() -> void:
 	graph.graph_updated.connect(graf_changed)
+	hp_bar.max_value = max_health
+	hp_bar.value = health
 
 func graf_changed(func_ref: Callable):
 	gun.f = func_ref
@@ -82,6 +85,7 @@ func level_up():
 	lvl_up_sound.play()
 	level += 1
 	health += 20
+	health_bar_update()
 	health = clamp(health,0,max_health)
 	xp -= level_up_requirement
 	level_up_requirement = 10 + 5*level + 2*(level**2)
@@ -153,3 +157,7 @@ func get_random_item():
 		return randomitem
 	else:
 		return null
+
+func health_bar_update():
+	hp_bar.value = health
+	pass

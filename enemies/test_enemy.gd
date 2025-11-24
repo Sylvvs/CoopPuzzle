@@ -22,6 +22,7 @@ func _physics_process(_delta: float) -> void:
 		position.y = move_toward(position.y,player.global_position.y,_delta*speed)
 	if body != null and body.is_in_group('player'):
 		body.health -= damage * (1-body.armor)
+		body.health_bar_update()
 		pass
 	move_and_slide()
 
