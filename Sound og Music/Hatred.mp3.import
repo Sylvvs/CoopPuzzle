@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ggmninyixrjf"
+path="res://.godot/imported/Hatred.mp3-7e0a8d43efdd07987c32019306b2f635.mp3str"
+
+[deps]
+
+source_file="res://Sound og Music/Hatred.mp3"
+dest_files=["res://.godot/imported/Hatred.mp3-7e0a8d43efdd07987c32019306b2f635.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

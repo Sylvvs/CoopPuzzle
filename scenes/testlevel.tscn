@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://b1lp30iyd6fco"]
+[gd_scene load_steps=52 format=4 uid="uid://b1lp30iyd6fco"]
 
 [ext_resource type="Texture2D" uid="uid://k54ffgc6l6q3" path="res://sprites/horror/Inside_D.png" id="1_hyqgw"]
 [ext_resource type="Texture2D" uid="uid://0rert5llgek2" path="res://sprites/horror/Inside_C.png" id="2_bx6wm"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://ckmcwb7bk0epo" path="res://enemies/strong_chicken.tscn" id="18_sptfc"]
 [ext_resource type="PackedScene" uid="uid://c35h8bv1gygy0" path="res://enemies/troll.tscn" id="20_ovtu5"]
 [ext_resource type="PackedScene" uid="uid://dcp2ero3brcsr" path="res://enemies/red_devil.tscn" id="21_13qpb"]
+[ext_resource type="AudioStream" uid="uid://ggmninyixrjf" path="res://Sound og Music/Hatred.mp3" id="23_13qpb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ifqpo"]
 texture = ExtResource("1_hyqgw")
@@ -7355,4 +7356,9 @@ spawns = Array[ExtResource("13_2bxju")]([SubResource("Resource_uows2"), SubResou
 stream = ExtResource("13_jyu13")
 volume_db = -2.862
 autoplay = true
+parameters/looping = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_13qpb")
+volume_db = -2.862
 parameters/looping = true
