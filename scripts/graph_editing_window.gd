@@ -166,6 +166,7 @@ func _update_difficulty(A: float, B: float, _C: float, _D: float):
 			diff += sqrt(abs(A)) * 0.2 + sqrt(abs(B)) * 0.5
 		"Exponential":
 			diff += sqrt(abs(A))
+			if B == 0: diff = 1.0;
 		"Potential":
 			diff += 0.5 * sqrt(abs(A)) + 0.2 * 1.0 / sqrt(abs(B)+0.1)
 		_:
