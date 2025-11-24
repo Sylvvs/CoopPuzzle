@@ -5,7 +5,7 @@ var health = 100
 var max_health = 100
 
 var xp = 0
-var level = 1
+var level := 1
 var level_up_requirement = 10
 var level_up_scaling = 1.8
 var functions = ["Quadratic", "Exponential", "Potential", "Sine"]
@@ -80,7 +80,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func level_up():
 	level += 1
 	xp -= level_up_requirement
-	level_up_requirement = level ** level_up_scaling
+	level_up_requirement = 10 + 5*level + 2*(level**2)
 	if level % 5 == 0 and not level > 20:
 		var graph_name = functions[(level/5)-1]
 		graph.load_graph(graph_name, func_params[graph_name])

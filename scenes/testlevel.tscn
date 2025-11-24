@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://b1lp30iyd6fco"]
+[gd_scene load_steps=30 format=4 uid="uid://b1lp30iyd6fco"]
 
 [ext_resource type="Texture2D" uid="uid://k54ffgc6l6q3" path="res://sprites/horror/Inside_D.png" id="1_hyqgw"]
 [ext_resource type="Texture2D" uid="uid://0rert5llgek2" path="res://sprites/horror/Inside_C.png" id="2_bx6wm"]
@@ -10,9 +10,10 @@
 [ext_resource type="Script" uid="uid://bj24gumcic2lt" path="res://scripts/interacts/default.gd" id="7_fljaa"]
 [ext_resource type="PackedScene" uid="uid://mvmpgwlg7orv" path="res://enemies/skeleton_dude.tscn" id="12_2bxju"]
 [ext_resource type="PackedScene" uid="uid://db5x82tfp6clh" path="res://scenes/enemyspawner.tscn" id="12_ifqpo"]
+[ext_resource type="PackedScene" uid="uid://bruhy0geyt5b8" path="res://enemies/grass_zombie.tscn" id="12_uows2"]
 [ext_resource type="Script" uid="uid://mfnrh5v2f7jc" path="res://scripts/enemy_info.gd" id="13_2bxju"]
+[ext_resource type="PackedScene" uid="uid://bp8u3quvue3bu" path="res://enemies/chicken_turtle_man.tscn" id="13_d1tnr"]
 [ext_resource type="AudioStream" uid="uid://cqh0vwveo1oxi" path="res://Sound og Music/Pokemon BlackWhite Music - N's Castle.mp3" id="13_jyu13"]
-[ext_resource type="PackedScene" uid="uid://dyxofys7wsice" path="res://enemies/moth_dragon_man.tscn" id="13_uows2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ifqpo"]
 texture = ExtResource("1_hyqgw")
@@ -7183,17 +7184,28 @@ radius = 80.0
 
 [sub_resource type="Resource" id="Resource_uows2"]
 script = ExtResource("13_2bxju")
-time_end = 20
+time_end = 120
 enemy = ExtResource("12_2bxju")
 enemy_num = 1
+enemy_spawn_delay = 2
 metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
 
-[sub_resource type="Resource" id="Resource_jyu13"]
+[sub_resource type="Resource" id="Resource_ylnb8"]
 script = ExtResource("13_2bxju")
-time_start = 15
-time_end = 10000
-enemy = ExtResource("13_uows2")
-enemy_num = 15
+time_start = 30
+time_end = 90
+enemy = ExtResource("12_uows2")
+enemy_num = 1
+enemy_spawn_delay = 10
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
+[sub_resource type="Resource" id="Resource_4k8th"]
+script = ExtResource("13_2bxju")
+time_start = 90
+time_end = 120
+enemy = ExtResource("13_d1tnr")
+enemy_num = 1
+enemy_spawn_delay = 3
 metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
 
 [node name="Node2D" type="Node2D"]
@@ -7218,7 +7230,7 @@ shape = SubResource("CircleShape2D_bx6wm")
 position = Vector2(465, 247)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("12_ifqpo")]
-spawns = Array[ExtResource("13_2bxju")]([SubResource("Resource_uows2"), SubResource("Resource_jyu13")])
+spawns = Array[ExtResource("13_2bxju")]([SubResource("Resource_uows2"), SubResource("Resource_ylnb8"), SubResource("Resource_4k8th")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_jyu13")

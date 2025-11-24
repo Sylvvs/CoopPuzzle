@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2ip06vkd8mby"]
+[gd_scene load_steps=4 format=3 uid="uid://8eirjvkrkebl"]
 
 [ext_resource type="Script" uid="uid://cs3pdehdkdle6" path="res://xp.gd" id="1_p74fk"]
 [ext_resource type="Texture2D" uid="uid://c7m3uumqnq0ef" path="res://xp/Gem_red.png" id="2_8btbs"]
@@ -8,6 +8,7 @@ radius = 7.071068
 
 [node name="xp-red" type="Area2D" groups=["xp"]]
 script = ExtResource("1_p74fk")
+xp_value = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 1)

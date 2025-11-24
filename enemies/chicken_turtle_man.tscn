@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbif8jhevykqx"]
+[gd_scene load_steps=8 format=3 uid="uid://bp8u3quvue3bu"]
 
 [ext_resource type="Script" uid="uid://bb31720s0lbpe" path="res://enemies/test_enemy.gd" id="1_36ng3"]
 [ext_resource type="Texture2D" uid="uid://b6r5hjcfr6jei" path="res://enemies/enemy sprites/Monster Sprites/05.png" id="2_ts0us"]
-[ext_resource type="PackedScene" path="res://xp/xp_red.tscn" id="2_x3d2b"]
+[ext_resource type="PackedScene" uid="uid://8eirjvkrkebl" path="res://xp/xp_red.tscn" id="2_x3d2b"]
 
 [sub_resource type="Animation" id="Animation_36ng3"]
 resource_name = "Hit"
@@ -47,6 +47,8 @@ height = 52.0
 
 [node name="ChickenTurtleMan" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_36ng3")
+health = 150
+speed = 20
 XP = ExtResource("2_x3d2b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
