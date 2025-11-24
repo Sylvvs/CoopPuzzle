@@ -8,6 +8,7 @@ var stats := {"Speed": 5.0, "Lifetime": 5.0, "Damage": 5.0, "Pierce": 1, "Cooldo
 var f: Callable = func(x): return sin(2*x)
 
 func _process(delta: float) -> void:
+	# print("Damage: ", stats["Damage"], " Mult: ", stats["difficulty_mult"])
 	var mouse = get_global_mouse_position()
 	var to_mouse = mouse - get_parent().global_position
 	

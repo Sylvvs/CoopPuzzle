@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://b1lp30iyd6fco"]
+[gd_scene load_steps=51 format=4 uid="uid://b1lp30iyd6fco"]
 
 [ext_resource type="Texture2D" uid="uid://k54ffgc6l6q3" path="res://sprites/horror/Inside_D.png" id="1_hyqgw"]
 [ext_resource type="Texture2D" uid="uid://0rert5llgek2" path="res://sprites/horror/Inside_C.png" id="2_bx6wm"]
@@ -14,6 +14,14 @@
 [ext_resource type="Script" uid="uid://mfnrh5v2f7jc" path="res://scripts/enemy_info.gd" id="13_2bxju"]
 [ext_resource type="PackedScene" uid="uid://bp8u3quvue3bu" path="res://enemies/chicken_turtle_man.tscn" id="13_d1tnr"]
 [ext_resource type="AudioStream" uid="uid://cqh0vwveo1oxi" path="res://Sound og Music/Pokemon BlackWhite Music - N's Castle.mp3" id="13_jyu13"]
+[ext_resource type="PackedScene" uid="uid://2o6pfo1tpygf" path="res://enemies/moth_dragon_man.tscn" id="13_uows2"]
+[ext_resource type="PackedScene" uid="uid://d3sqw4g0mfh1x" path="res://enemies/blue_swamp_guy.tscn" id="14_jyu13"]
+[ext_resource type="PackedScene" uid="uid://c0sc47auikx6k" path="res://enemies/sand_golem.tscn" id="15_4k8th"]
+[ext_resource type="PackedScene" uid="uid://ctw6okfjkaj8x" path="res://enemies/fast_chichken.tscn" id="16_86ygi"]
+[ext_resource type="PackedScene" uid="uid://buar28oebxcui" path="res://enemies/alien_long_arm.tscn" id="17_sptfc"]
+[ext_resource type="PackedScene" uid="uid://ckmcwb7bk0epo" path="res://enemies/strong_chicken.tscn" id="18_sptfc"]
+[ext_resource type="PackedScene" uid="uid://c35h8bv1gygy0" path="res://enemies/troll.tscn" id="20_ovtu5"]
+[ext_resource type="PackedScene" uid="uid://dcp2ero3brcsr" path="res://enemies/red_devil.tscn" id="21_13qpb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ifqpo"]
 texture = ExtResource("1_hyqgw")
@@ -7187,7 +7195,7 @@ script = ExtResource("13_2bxju")
 time_end = 120
 enemy = ExtResource("12_2bxju")
 enemy_num = 1
-enemy_spawn_delay = 2
+enemy_spawn_delay = 1
 metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
 
 [sub_resource type="Resource" id="Resource_ylnb8"]
@@ -7205,7 +7213,118 @@ time_start = 90
 time_end = 120
 enemy = ExtResource("13_d1tnr")
 enemy_num = 1
-enemy_spawn_delay = 3
+enemy_spawn_delay = 1
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
+[sub_resource type="Resource" id="Resource_d1tnr"]
+script = ExtResource("13_2bxju")
+time_start = 105
+time_end = 150
+enemy = ExtResource("14_jyu13")
+enemy_num = 1
+enemy_spawn_delay = 1
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
+[sub_resource type="Resource" id="Resource_86ygi"]
+script = ExtResource("13_2bxju")
+time_start = 120
+time_end = 150
+enemy = ExtResource("13_d1tnr")
+enemy_num = 2
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
+[sub_resource type="Resource" id="Resource_xnipy"]
+script = ExtResource("13_2bxju")
+time_start = 150
+time_end = 180
+enemy = ExtResource("12_uows2")
+enemy_num = 1
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
+[sub_resource type="Resource" id="Resource_ovtu5"]
+script = ExtResource("13_2bxju")
+time_start = 180
+time_end = 240
+enemy = ExtResource("15_4k8th")
+enemy_num = 1
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
+[sub_resource type="Resource" id="Resource_13qpb"]
+script = ExtResource("13_2bxju")
+time_start = 210
+time_end = 300
+enemy = ExtResource("16_86ygi")
+enemy_num = 3
+enemy_spawn_delay = 5
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
+[sub_resource type="Resource" id="Resource_eghoi"]
+script = ExtResource("13_2bxju")
+time_start = 270
+time_end = 300
+enemy = ExtResource("17_sptfc")
+enemy_num = 1
+enemy_spawn_delay = 1
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
+[sub_resource type="Resource" id="Resource_xhaer"]
+script = ExtResource("13_2bxju")
+time_start = 300
+time_end = 390
+enemy = ExtResource("18_sptfc")
+enemy_num = 1
+enemy_spawn_delay = 1
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
+[sub_resource type="Resource" id="Resource_csw3h"]
+script = ExtResource("13_2bxju")
+time_start = 360
+time_end = 420
+enemy = ExtResource("13_uows2")
+enemy_num = 1
+enemy_spawn_delay = 15
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
+[sub_resource type="Resource" id="Resource_2js2i"]
+script = ExtResource("13_2bxju")
+time_start = 390
+time_end = 450
+enemy = ExtResource("20_ovtu5")
+enemy_num = 1
+enemy_spawn_delay = 1
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
+[sub_resource type="Resource" id="Resource_nx4cp"]
+script = ExtResource("13_2bxju")
+time_start = 450
+time_end = 500
+enemy = ExtResource("21_13qpb")
+enemy_num = 1
+enemy_spawn_delay = 1
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
+[sub_resource type="Resource" id="Resource_gcbpc"]
+script = ExtResource("13_2bxju")
+time_start = 500
+time_end = 550
+enemy = ExtResource("21_13qpb")
+enemy_num = 1
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
+[sub_resource type="Resource" id="Resource_5fega"]
+script = ExtResource("13_2bxju")
+time_start = 550
+time_end = 600
+enemy = ExtResource("21_13qpb")
+enemy_num = 3
+metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
+
+[sub_resource type="Resource" id="Resource_b5i6p"]
+script = ExtResource("13_2bxju")
+time_start = 600
+time_end = 10000
+enemy = ExtResource("21_13qpb")
+enemy_num = 5
 metadata/_custom_type_script = "uid://mfnrh5v2f7jc"
 
 [node name="Node2D" type="Node2D"]
@@ -7230,7 +7349,7 @@ shape = SubResource("CircleShape2D_bx6wm")
 position = Vector2(465, 247)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("12_ifqpo")]
-spawns = Array[ExtResource("13_2bxju")]([SubResource("Resource_uows2"), SubResource("Resource_ylnb8"), SubResource("Resource_4k8th")])
+spawns = Array[ExtResource("13_2bxju")]([SubResource("Resource_uows2"), SubResource("Resource_ylnb8"), SubResource("Resource_4k8th"), SubResource("Resource_d1tnr"), SubResource("Resource_86ygi"), SubResource("Resource_xnipy"), SubResource("Resource_ovtu5"), SubResource("Resource_13qpb"), SubResource("Resource_eghoi"), SubResource("Resource_xhaer"), SubResource("Resource_csw3h"), SubResource("Resource_2js2i"), SubResource("Resource_nx4cp"), SubResource("Resource_gcbpc"), SubResource("Resource_5fega"), SubResource("Resource_b5i6p")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_jyu13")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bruhy0geyt5b8"]
 
 [ext_resource type="Script" uid="uid://bb31720s0lbpe" path="res://enemies/test_enemy.gd" id="1_ay63d"]
-[ext_resource type="PackedScene" uid="uid://8eirjvkrkebl" path="res://xp/xp_red.tscn" id="2_7orb8"]
+[ext_resource type="PackedScene" path="res://xp/xp_blue.tscn" id="2_7orb8"]
 [ext_resource type="Texture2D" uid="uid://dqocsyb2uvk75" path="res://enemies/enemy sprites/Monster Sprites/02.png" id="2_54qng"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ay63d"]

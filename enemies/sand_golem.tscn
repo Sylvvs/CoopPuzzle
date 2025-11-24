@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bskj1i3sys1vm"]
+[gd_scene load_steps=8 format=3 uid="uid://c0sc47auikx6k"]
 
 [ext_resource type="Script" uid="uid://bb31720s0lbpe" path="res://enemies/test_enemy.gd" id="1_014bn"]
 [ext_resource type="Texture2D" uid="uid://cd64wbb3kftq2" path="res://enemies/enemy sprites/Monster Sprites/10.png" id="2_7q132"]
-[ext_resource type="PackedScene" path="res://xp/xp_green.tscn" id="2_fisxk"]
+[ext_resource type="PackedScene" path="res://xp/xp_blue.tscn" id="2_fisxk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_seg00"]
 radius = 18.0
@@ -48,10 +48,10 @@ _data = {
 
 [node name="SandGolem" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_014bn")
-health = 150
+health = 350
 speed = 15
 XP = ExtResource("2_fisxk")
-damage = 40
+damage = 20
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_7q132")

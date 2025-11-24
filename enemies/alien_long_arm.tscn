@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://3cxndm0ferit"]
+[gd_scene load_steps=8 format=3 uid="uid://buar28oebxcui"]
 
 [ext_resource type="Script" uid="uid://bb31720s0lbpe" path="res://enemies/test_enemy.gd" id="1_kpu7p"]
 [ext_resource type="Texture2D" uid="uid://c752doe2curis" path="res://enemies/enemy sprites/Monster Sprites/04.png" id="1_ye7ao"]
@@ -47,10 +47,10 @@ _data = {
 
 [node name="AlienLongArm" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_kpu7p")
-health = 40
-speed = 30
+health = 500
+speed = 15
 XP = ExtResource("2_2nv8l")
-damage = 15
+damage = 40
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ye7ao")

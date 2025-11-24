@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://do6iq5xuuy44e"]
+[gd_scene load_steps=8 format=3 uid="uid://d3sqw4g0mfh1x"]
 
 [ext_resource type="Script" uid="uid://bb31720s0lbpe" path="res://enemies/test_enemy.gd" id="1_63wbf"]
 [ext_resource type="Texture2D" uid="uid://dtr66edtwsmfw" path="res://enemies/enemy sprites/Monster Sprites/07.png" id="2_5rwq1"]
-[ext_resource type="PackedScene" path="res://xp/xp_green.tscn" id="2_p0ivy"]
+[ext_resource type="PackedScene" uid="uid://8eirjvkrkebl" path="res://xp/xp_red.tscn" id="2_p0ivy"]
 
 [sub_resource type="Animation" id="Animation_0wayk"]
 resource_name = "Hit"
@@ -47,10 +47,10 @@ height = 62.0
 
 [node name="BlueSwampGuy" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_63wbf")
-health = 50
-speed = 35
+health = 200
+speed = 20
 XP = ExtResource("2_p0ivy")
-damage = 25
+damage = 15
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_5rwq1")

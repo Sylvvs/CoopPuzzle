@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d4jd4q1lopl1o"]
+[gd_scene load_steps=8 format=3 uid="uid://ctw6okfjkaj8x"]
 
 [ext_resource type="Script" uid="uid://bb31720s0lbpe" path="res://enemies/test_enemy.gd" id="1_dav53"]
 [ext_resource type="Texture2D" uid="uid://bx0mrahs6klmx" path="res://enemies/enemy sprites/Monster Sprites/06.png" id="2_o0e01"]
@@ -47,10 +47,10 @@ height = 46.0
 
 [node name="FastChicken" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_dav53")
-health = 15
+health = 100
 speed = 50
 XP = ExtResource("2_tci0k")
-damage = 3
+damage = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_o0e01")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://tn4s3bjje5bb"]
+[gd_scene load_steps=8 format=3 uid="uid://dcp2ero3brcsr"]
 
 [ext_resource type="Script" uid="uid://bb31720s0lbpe" path="res://enemies/test_enemy.gd" id="1_n5pgu"]
 [ext_resource type="PackedScene" path="res://xp/xp_green.tscn" id="2_qo3yb"]
@@ -47,7 +47,7 @@ height = 58.0
 
 [node name="RedDevil" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_n5pgu")
-health = 100
+health = 3000
 speed = 50
 XP = ExtResource("2_qo3yb")
 damage = 50

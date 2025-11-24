@@ -32,7 +32,7 @@ func _ready() -> void:
 
 func graf_changed(func_ref: Callable):
 	gun.f = func_ref
-	gun.stats["difficulty_mult"] *= graph.difficulty_mult
+	gun.stats["difficulty_mult"] = graph.difficulty_mult
 	#gun.stats["Pierce"] = 1+(level/5)
 	print("Damage is now ", gun.stats["Damage"])
 	print("Pierce is now ", gun.stats["Pierce"])
@@ -102,11 +102,11 @@ func level_up():
 func upgrade_character(upgrade):
 	match upgrade:
 		"magictome1","magictome2","magictome3","magictome4","magictome5":
-			gun.stats["Cooldown_Timer"] *= 0.8
+			gun.stats["Cooldown_Timer"] *= 0.9
 		"speed1","speed2","speed3","speed4","speed5":
-			SPEED += 20
+			SPEED += 15
 		"damage1","damage2","damage3","damage4","damage5":
-			gun.stats["Damage"] += 5
+			gun.stats["Damage"] += 2.5
 		"health1","health2","health3","health4","health5":
 			max_health *= 1.2
 			health += max_health / 6

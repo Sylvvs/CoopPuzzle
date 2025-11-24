@@ -3,7 +3,7 @@ extends CharacterBody2D
 var player
 var health = 50
 
-const XP = preload("res://xp/xp.tscn")
+const XP = preload("res://xp/xp_red.tscn")
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group('player')
