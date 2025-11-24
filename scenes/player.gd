@@ -24,6 +24,7 @@ var spell_cooldown = 0
 @onready var gun = $Gun
 @onready var graph = $CanvasLayer/GraphEditingWindow
 @onready var gameover = $CanvasLayer/GameOver
+@onready var xp_range = $XPpickuprange/CollisionShape2D
 
 
 func _ready() -> void:
@@ -113,6 +114,8 @@ func upgrade_character(upgrade):
 			armor += 0.1
 		"pierce1","pierce2","pierce3","pierce4","pierce5":
 			gun.stats["Pierce"] += 1
+		"magnet1", "magnet2", "magnet3", "magnet4", "magnet5":
+			xp_range.scale += Vector2(0.2,0.2)
 	
 	var option_children = upgradeOptions.get_children()
 	for i in option_children:

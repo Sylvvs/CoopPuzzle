@@ -243,9 +243,49 @@ const UPGRADES = {
 		"type": "passive",
 		"icon": ICON_PATH + "pierce.png"
 	},
+	"magnet1": {
+		"displayname": "Black Hole",
+		"details": "The black hole sucks in xp orbs from a greater range",
+		"level": "Level 1",
+		"prerequisite": [],
+		"type": "passive",
+		"icon": ICON_PATH + "black_hole.png"
+	},
+	"magnet2": {
+		"displayname": "Black Hole",
+		"details": "The black hole sucks in xp orbs from a greater range",
+		"level": "Level 2",
+		"prerequisite": ["magnet1"],
+		"type": "passive",
+		"icon": ICON_PATH + "black_hole.png"
+	},
+	"magnet3": {
+		"displayname": "Black Hole",
+		"details": "The black hole sucks in xp orbs from a greater range",
+		"level": "Level 3",
+		"prerequisite": ["magnet2"],
+		"type": "passive",
+		"icon": ICON_PATH + "black_hole.png"
+	},
+	"magnet4": {
+		"displayname": "Black Hole",
+		"details": "The black hole sucks in xp orbs from a greater range",
+		"level": "Level 4",
+		"prerequisite": ["magnet3"],
+		"type": "passive",
+		"icon": ICON_PATH + "black_hole.png"
+	},
+	"magnet5": {
+		"displayname": "Black Hole",
+		"details": "The black hole sucks in xp orbs from a greater range",
+		"level": "Level 5",
+		"prerequisite": ["magnet4"],
+		"type": "passive",
+		"icon": ICON_PATH + "black_hole.png"
+	},
 	"food": {
-		"displayname": "Food",
-		"details": "This food will heal you",
+		"displayname": "Bandage",
+		"details": "This bandage heals you",
 		"level": "",
 		"prerequisite": [],
 		"type": "item",

@@ -7224,3 +7224,4 @@ spawns = Array[ExtResource("13_2bxju")]([SubResource("Resource_uows2"), SubResou
 stream = ExtResource("13_jyu13")
 volume_db = -2.862
 autoplay = true
+parameters/looping = true
