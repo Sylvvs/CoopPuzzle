@@ -44,80 +44,80 @@ const UPGRADES = {
 		"icon": ICON_PATH + "magictome.png"
 	},
 	"health1": {
-		"displayname": "Can of beans",
-		"details": "The beans give you more max hp",
+		"displayname": "Heart",
+		"details": "Your heart becomes bigger allowing you more max hp",
 		"level": "Level 1",
 		"prerequisite": [],
 		"type": "passive",
 		"icon": ICON_PATH + "health.png"
 	},
 	"health2": {
-		"displayname": "Can of beans",
-		"details": "The beans give you more max hp",
+		"displayname": "Heart",
+		"details": "Your heart becomes bigger allowing you more max hp",
 		"level": "Level 2",
 		"prerequisite": ["health1"],
 		"type": "passive",
 		"icon": ICON_PATH + "health.png"
 	},
 	"health3": {
-		"displayname": "Can of beans",
-		"details": "The beans give you more max hp",
+		"displayname": "Heart",
+		"details": "Your heart becomes bigger allowing you more max hp",
 		"level": "Level 3",
 		"prerequisite": ["health2"],
 		"type": "passive",
 		"icon": ICON_PATH + "health.png"
 	},
 	"health4": {
-		"displayname": "Can of beans",
-		"details": "The beans give you more max hp",
+		"displayname": "Heart",
+		"details": "Your heart becomes bigger allowing you more max hp",
 		"level": "Level 4",
 		"prerequisite": ["health3"],
 		"type": "passive",
 		"icon": ICON_PATH + "health.png"
 	},
 	"health5": {
-		"displayname": "Can of beans",
-		"details": "The beans give you more max hp",
+		"displayname": "Heart",
+		"details": "Your heart becomes bigger allowing you more max hp",
 		"level": "Level 5",
 		"prerequisite": ["health4"],
 		"type": "passive",
 		"icon": ICON_PATH + "health.png"
 	},
 	"speed1": {
-		"displayname": "Wings",
-		"details": "These wings make you faster",
+		"displayname": "Speed",
+		"details": "You become faster",
 		"level": "Level 1",
 		"prerequisite": [],
 		"type": "passive",
 		"icon": ICON_PATH + "speed.png"
 	},
 	"speed2": {
-		"displayname": "Wings",
-		"details": "These wings make you faster",
+		"displayname": "Speed",
+		"details": "You become faster",
 		"level": "Level 2",
 		"prerequisite": ["speed1"],
 		"type": "passive",
 		"icon": ICON_PATH + "speed.png"
 	},
 	"speed3": {
-		"displayname": "Wings",
-		"details": "These wings make you faster",
+		"displayname": "Speed",
+		"details": "You become faster",
 		"level": "Level 3",
 		"prerequisite": ["speed2"],
 		"type": "passive",
 		"icon": ICON_PATH + "speed.png"
 	},
 	"speed4": {
-		"displayname": "Wings",
-		"details": "These wings make you faster",
+		"displayname": "Speed",
+		"details": "You become faster",
 		"level": "Level 4",
 		"prerequisite": ["speed3"],
 		"type": "passive",
 		"icon": ICON_PATH + "speed.png"
 	},
 	"speed5": {
-		"displayname": "Wings",
-		"details": "These wings make you faster",
+		"displayname": "Speed",
+		"details": "You become faster",
 		"level": "Level 5",
 		"prerequisite": ["speed4"],
 		"type": "passive",
@@ -164,40 +164,40 @@ const UPGRADES = {
 		"icon": ICON_PATH + "armor.png"
 	},
 	"damage1": {
-		"displayname": "Arming",
-		"details": "You get more damage",
+		"displayname": "Blood sword",
+		"details": "You infuse your bullets with blood giving you more damage",
 		"level": "Level 1",
 		"prerequisite": [],
 		"type": "passive",
 		"icon": ICON_PATH + "damage.png"
 	},
 	"damage2": {
-		"displayname": "Arming",
-		"details": "You get more damage",
+		"displayname": "Blood sword",
+		"details": "You infuse your bullets with blood giving you more damage",
 		"level": "Level 2",
 		"prerequisite": ["damage1"],
 		"type": "passive",
 		"icon": ICON_PATH + "damage.png"
 	},
 	"damage3": {
-		"displayname": "Arming",
-		"details": "You get more damage",
+		"displayname": "Blood sword",
+		"details": "You infuse your bullets with blood giving you more damage",
 		"level": "Level 3",
 		"prerequisite": ["damage2"],
 		"type": "passive",
 		"icon": ICON_PATH + "damage.png"
 	},
 	"damage4": {
-		"displayname": "Arming",
-		"details": "You get more damage",
+		"displayname": "Blood sword",
+		"details": "You infuse your bullets with blood giving you more damage",
 		"level": "Level 4",
 		"prerequisite": ["damage3"],
 		"type": "passive",
 		"icon": ICON_PATH + "damage.png"
 	},
 	"damage5": {
-		"displayname": "Arming",
-		"details": "You get more damage",
+		"displayname": "Blood sword",
+		"details": "You infuse your bullets with blood giving you more damage",
 		"level": "Level 5",
 		"prerequisite": ["damage5"],
 		"type": "passive",
