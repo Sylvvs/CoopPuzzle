@@ -25,6 +25,7 @@ var spell_cooldown = 0
 @onready var graph = $CanvasLayer/GraphEditingWindow
 @onready var gameover = $CanvasLayer/GameOver
 @onready var xp_range = $XPpickuprange/CollisionShape2D
+@onready var lvl_up_sound = $AudioStreamPlayer
 
 
 func _ready() -> void:
@@ -78,7 +79,10 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 
 func level_up():
+	lvl_up_sound.play()
 	level += 1
+	health += 20
+	health = clamp(health,0,max_health)
 	xp -= level_up_requirement
 	level_up_requirement = 10 + 5*level + 2*(level**2)
 	if level % 5 == 0 and not level > 20:
