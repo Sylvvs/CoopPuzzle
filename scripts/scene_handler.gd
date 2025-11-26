@@ -3,7 +3,7 @@ extends Node
 var current_scene: Node = null
 
 func _ready() -> void:
-	load_scene("testlevel")
+	load_scene("startscreen")
 
 func load_scene(scene_name: String) -> void:
 	var path = "res://Scenes/%s.tscn" % scene_name
