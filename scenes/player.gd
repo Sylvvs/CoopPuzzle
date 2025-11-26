@@ -161,3 +161,5 @@ func get_random_item():
 func health_bar_update():
 	hp_bar.value = health
 	pass
+	
+	
