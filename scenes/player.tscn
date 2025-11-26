@@ -27,7 +27,7 @@
 [ext_resource type="AudioStream" uid="uid://dkr1v2gyc1ffc" path="res://Sound og Music/Level Up.mp3" id="25_ke2ow"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
-radius = 15.0
+radius = 10.049875
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
 radius = 15.132746
@@ -656,13 +656,13 @@ graph_offset = Vector2(12, 5)
 collision_mask = 2
 script = ExtResource("1_g2els")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_qhqgy")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_d2wvv")
 region_enabled = true
 region_rect = Rect2(0, 0, 48, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qhqgy")
 
 [node name="Area2D" type="Area2D" parent="."]
 

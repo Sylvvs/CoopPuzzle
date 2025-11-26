@@ -42,8 +42,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dsjur"]
-radius = 15.0
-height = 52.0
+radius = 8.0
+height = 36.0
 
 [node name="ChickenTurtleMan" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_36ng3")
