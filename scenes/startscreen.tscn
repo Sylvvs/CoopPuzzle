@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dmmwp48btsexi"]
+[gd_scene load_steps=15 format=4 uid="uid://dmmwp48btsexi"]
 
 [ext_resource type="Texture2D" uid="uid://cm2msvno22ga1" path="res://sprites/horror/A4.png" id="1_7nbyq"]
 [ext_resource type="Texture2D" uid="uid://k54ffgc6l6q3" path="res://sprites/horror/Inside_D.png" id="1_o6o42"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://0rert5llgek2" path="res://sprites/horror/Inside_C.png" id="2_q30ww"]
 [ext_resource type="Texture2D" uid="uid://dk856cynv2ved" path="res://sprites/horror/Inside_E.png" id="3_7nbyq"]
 [ext_resource type="Script" uid="uid://2tp8je2lqwq" path="res://scenes/button.gd" id="6_4ge0g"]
+[ext_resource type="FontFile" uid="uid://c8iu70m00hs48" path="res://Locanita.otf" id="7_g1ylw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6g0no"]
 texture = ExtResource("1_7nbyq")
@@ -4175,8 +4176,10 @@ offset_left = 230.0
 offset_top = 73.0
 offset_right = 538.0
 offset_bottom = 140.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0.7411765, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_g1ylw")
 theme_override_font_sizes/font_size = 48
 text = "Graph Bound"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
