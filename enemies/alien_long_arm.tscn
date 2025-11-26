@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bb31720s0lbpe" path="res://enemies/test_enemy.gd" id="1_kpu7p"]
 [ext_resource type="Texture2D" uid="uid://c752doe2curis" path="res://enemies/enemy sprites/Monster Sprites/04.png" id="1_ye7ao"]
-[ext_resource type="PackedScene" path="res://xp/xp_blue.tscn" id="2_2nv8l"]
+[ext_resource type="PackedScene" uid="uid://b8d07pondnk8f" path="res://xp/xp_blue.tscn" id="2_2nv8l"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6po6r"]
-radius = 20.0
-height = 64.0
+radius = 13.0
+height = 50.0
 
 [sub_resource type="Animation" id="Animation_kpu7p"]
 resource_name = "Hit"

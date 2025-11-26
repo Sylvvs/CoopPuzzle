@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bb31720s0lbpe" path="res://enemies/test_enemy.gd" id="1_dav53"]
 [ext_resource type="Texture2D" uid="uid://bx0mrahs6klmx" path="res://enemies/enemy sprites/Monster Sprites/06.png" id="2_o0e01"]
-[ext_resource type="PackedScene" path="res://xp/xp_blue.tscn" id="2_tci0k"]
+[ext_resource type="PackedScene" uid="uid://b8d07pondnk8f" path="res://xp/xp_blue.tscn" id="2_tci0k"]
 
 [sub_resource type="Animation" id="Animation_j6wct"]
 resource_name = "Hit"
@@ -42,8 +42,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_70sxs"]
-radius = 13.0
-height = 46.0
+radius = 8.0
+height = 38.0
 
 [node name="FastChicken" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_dav53")

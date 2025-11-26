@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://cgdcg1qjfcjif" path="res://enemies/enemy sprites/Monster Sprites/03.png" id="2_fj0xi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_64hiu"]
-radius = 12.0
-height = 54.0
+radius = 7.0
+height = 38.0
 
 [sub_resource type="Animation" id="Animation_2ladb"]
 resource_name = "Hit"

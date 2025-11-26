@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://ckmcwb7bk0epo"]
 
 [ext_resource type="Script" uid="uid://bb31720s0lbpe" path="res://enemies/test_enemy.gd" id="1_kqo75"]
-[ext_resource type="PackedScene" path="res://xp/xp_blue.tscn" id="2_17c2w"]
+[ext_resource type="PackedScene" uid="uid://b8d07pondnk8f" path="res://xp/xp_blue.tscn" id="2_17c2w"]
 [ext_resource type="Texture2D" uid="uid://h08cbgijvofn" path="res://enemies/enemy sprites/Monster Sprites/08.png" id="2_ikgp0"]
 
 [sub_resource type="Animation" id="Animation_kqo75"]
@@ -42,8 +42,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bjkgh"]
-radius = 17.0
-height = 50.0
+radius = 8.0
+height = 42.0
 
 [node name="StrongChicken" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_kqo75")
@@ -64,5 +64,5 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6)
+position = Vector2(-2, 6)
 shape = SubResource("CapsuleShape2D_bjkgh")

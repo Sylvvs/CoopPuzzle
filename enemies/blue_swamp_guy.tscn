@@ -42,8 +42,7 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qwy2i"]
-radius = 15.0
-height = 62.0
+height = 46.0
 
 [node name="BlueSwampGuy" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_63wbf")
