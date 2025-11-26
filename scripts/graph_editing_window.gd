@@ -34,7 +34,6 @@ func load_graph(graph_type: String, params: Dictionary):
 	current_params = params.duplicate()
 
 	graph_type_label.text = _get_function_string()
-	diff_label.text = "Current damage multiplier: %s" % difficulty_mult;
 	_build_param_ui()
 	_update_preview()
 	diff_label.text = "Current damage multiplier: %s" % difficulty_mult;
@@ -166,10 +165,11 @@ func _update_difficulty(A: float, B: float, _C: float, _D: float):
 		"Quadratic":
 			diff += sqrt(abs(A)) * 0.2 + sqrt(abs(B)) * 0.5
 		"Exponential":
-			diff += sqrt(abs(A)) * 1.4
+			diff += sqrt(abs(A)) * 1.2
 			if B == 0: diff = 1.0;
 		"Potential":
 			diff += 0.5 * sqrt(abs(A)) + 0.2 * 1.0 / sqrt(abs(B)+0.1)
+			diff *= 1.4
 			if B == 0: diff = 1.0;
 		_:
 			diff = 1.0
