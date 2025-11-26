@@ -88,7 +88,7 @@ func get_highscores(limit: int = 10, offset: int = 0):
 		"command": "getHighscores",
 		"data": {
 			"limit": limit,
-			"offset": limit
+			"offset": offset
 		}
 	})
 
