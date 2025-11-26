@@ -91,3 +91,35 @@ bbcode_enabled = true
 text = "[color=red]Grafen skal skære (0,0)![/color]"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="dmg_mult_hint" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.052
+anchor_bottom = 0.053000003
+offset_left = 33.0
+offset_top = 301.0
+offset_right = 286.064
+offset_bottom = 325.77066
+theme_override_font_sizes/font_size = 10
+text = "Hint: Prøv forskellige kombinationer
+og se hvor høj en multiplier du kan få!"
+
+[node name="graf_hint" type="Label" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 239.0
+offset_right = 303.0
+offset_bottom = 291.0
+theme_override_font_sizes/font_size = 10
+text = "HInt: Dine skud kommer til at følge
+linjen af din graf"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 34.0
+offset_right = 693.0
+offset_bottom = 57.0
+theme_override_font_sizes/font_size = 10
+text = "Hint: Når du er færdig med din graf så tryk på krydset"
