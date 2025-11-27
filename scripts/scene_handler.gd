@@ -6,7 +6,7 @@ func _ready() -> void:
 	load_scene("startscreen")
 
 func load_scene(scene_name: String) -> void:
-	var path = "res://Scenes/%s.tscn" % scene_name
+	var path = "res://scenes/%s.tscn" % scene_name
 	var scene_res = load(path)
 	if scene_res == null:
 		push_error("Failed to load scene: " + path)
